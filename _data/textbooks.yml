@@ -1,0 +1,23 @@
+general:
+- title:  "Machine Learning: A Probabilistic Perspective"
+  author: "Kevin Murphy"
+  url:    false
+  desc:   false
+- title:  "Artificial Intelligence: A Modern Approach"
+  author: "Stuart Russel, Peter Norvig"
+  url:    false
+  desc:   false
+
+specific:
+- title:  "Make Your Own Neural Network"
+  author: "Tariq Rashid"
+  url:    "https://drive.google.com/open?id=0B65X3y3Tw2wYVk93THo4YXg2QVU"
+  desc:   false
+- title:  "Neural Networks And Deep Learning"
+  author: "Michael Nielson"
+  url:    "http://neuralnetworksanddeeplearning.com/"
+  desc:   false
+- title:  "Deep Learning"
+  author: "Ian Goodfellow, et al"
+  url:    "http://deeplearningbook.com/"
+  desc:   false

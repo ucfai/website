@@ -1,0 +1,33 @@
+<ul id="syllabus" class="listing calendar">
+  {% assign posts = site.posts | sort: 'date' %}
+
+  {% if include.reversed %}
+    {% for meet in posts reversed %}
+      {% if meet.categories[1] == include.semester and (meet.tags contains "workshop" or meet.tags contains "lecture") %}
+        <li class="item">
+          <a href="{{ meet.url }}" class="card">
+            <span class="info event">
+              <h3 class="title event">  {{ meet.title }} </h3>
+              <p  class="desc event">   {{ meet.tags[0] | capitalize }} </p>
+            </span>
+            <span class="date event"> {{ meet.date | date: "%x" }} </span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for meet in posts %}
+      {% if meet.categories[1] == include.semester and (meet.tags contains "workshop" or meet.tags contains "lecture") %}
+        <li class="item">
+          <a href="{{ meet.url }}" class="card">
+            <span class="info event">
+              <h3 class="title event">  {{ meet.title }} </h3>
+              <p  class="desc event">   {{ meet.tags[0] | capitalize }} </p>
+            </span>
+            <span class="date event"> {{ meet.date | date: "%x" }} </span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</ul>

@@ -1,0 +1,17 @@
+ul.list-panel {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  li {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &.four {
+    li {
+      width: 23%;
+      margin: 0 1%;
+    }
+  }
+}

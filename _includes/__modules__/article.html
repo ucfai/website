@@ -1,0 +1,62 @@
+{% assign type = include.type %}
+<ul class="listing {{ type }}">
+{% case type %}
+
+{% when "novels" or
+        "papers" or
+        "textbooks" or
+        "tutorials" or
+        "videos" %}
+
+  {% for item in include.iter %}
+
+  {% comment %} logic {% endcomment %}
+
+  {% capture title %}
+    <em> {{ item.title }} </em>
+    {% if item.author %}
+      &ndash; {{ item.author }}
+    {% endif %}
+  {% endcapture %}
+
+  {% capture desc %}
+    {% if item.desc %}
+      <p class="desc {{ type }}"> {{ item.desc | remove: '"' }} </p>
+    {% endif %}
+  {% endcapture %}
+
+  {% capture url %}
+    {% if item.url %}
+      <span class="date {{ type }}"> Link </span>
+    {% endif %}
+  {% endcapture %}
+
+  <li class="item">
+    <a class="card {{ type }}" href="{{ item.url }}">
+      <span class="info {{ type }}">
+        <h3 class="title {{ type }}"> {{ title }} </h3>
+        {{ desc }}
+      </span>
+      {{ url }}
+    </a>
+  </li>
+
+  {% endfor %}
+
+{% when "meetups" %}
+
+  {% for item in include.iter %}
+  <li class="item{% if site.sem == item %} current{% endif %}">
+    <a class="card {{ type }}" href="/meetups/{{ item }}">
+      <span class="info {{ type }}">
+        <h3 class="title {{ type }}">
+          {{ site.data.semesters[item].words }}
+        </h3>
+      </span>
+      <span class="date {{ type }}"> Link </span>
+    </a>
+  </li>
+  {% endfor %}
+
+{% endcase %}
+</ul>

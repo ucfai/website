@@ -1,0 +1,30 @@
+- # 0
+  title:  "Building Machines That Learn and Think Like People"
+  author: "Lake, et al"
+  desc:   false
+  url:    "http://www.mit.edu/~tomeru/papers/machines_that_think.pdf"
+  diff:   [A, L]
+- # 1
+  title:  "A Few Useful Things to Know about Machine Learning"
+  author: "Pedro Domingos"
+  desc:   false
+  url:    "https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
+  diff:   [N]
+- # 2
+  title:  "Searle's Chinese Room Argument and its Replies"
+  author: "Mariano de Dompablo Cordio"
+  desc:   false
+  url:    "http://www.cogs.indiana.edu/icogsci/vol3/Searle's%20Chinese%20Room.pdf"
+  diff:   [A, L]
+- # 3
+  title:  "Why Should I Trust You? Explaining the Predictions of Any Classifier"
+  author: "Marco Tulio Ribeiro et. al."
+  desc:   false
+  url:    "http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf"
+  diff:   []
+- # 4
+  title:  "Micro-Data Learning: The Other End of the Spectrum"
+  author: "Jean-Baptiste Mouret"
+  desc:   false
+  url:    "http://ercim-news.ercim.eu/en107/special/micro-data-learning-the-other-end-of-the-spectrum"
+  diff:   []

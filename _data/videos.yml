@@ -1,0 +1,20 @@
+- # 0
+  title:  "The Mind Machines"
+  desc:   >
+    "A 1978 documentary."
+  url:    "https://www.youtube.com/watch?v=zfLRnOYjB4Q"
+- # 1
+  title:  "Consciousness in Artificial Intelligence"
+  desc:   >
+    "Google talk by John Searle."
+  url:    "https://www.youtube.com/watch?v=rHKwIYsPXLg"
+- # 2
+  title:  "Explaining the Predictions of Machine Learning Models"
+  desc:   >
+    "Podcast interview with Carlos Guestrin on explanability."
+  url:    "https://twimlai.com/twiml-talk-7-carlos-guestrin-explaining-predictions-machine-learning-models/"
+- # 3
+  title:  "Plenary Panel: Is Deep Learning The New 42?"
+  desc:   >
+    "Panel at 2016 KDD conference on Deep Learning."
+  url:    "https://www.youtube.com/watch?v=furfdqtdAvc"

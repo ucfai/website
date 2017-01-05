@@ -1,0 +1,16 @@
+fa16:
+  words:  Fall 2016
+  start:  08-22-2016
+  end:    12-12-2016
+sp17:
+  words:  Spring 2017
+  start:  01-09-2016
+  end:    05-05-2016
+fa17:
+  words:  Fall 2017
+  start:  false
+  end:    false
+sp18:
+  words:  Spring 2018
+  start:  false
+  end:    false

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include __modules__/nav.html name="home" %}
+
+    <main aria-label="Content">
+      <div id="home">
+        <div id="home-content">
+          <div id="home-content-text">
+            {{ content }}
+          </div>
+          <div id="home-content-calendar">
+            {% include __modules__/calendar.html semester=site.sem %}
+          </div>
+        </div>
+        <div id="home-gradient"> </div>
+        <div id="home-picture" > </div>
+      </div>
+    </main>
+
+  </body>
+
+</html>

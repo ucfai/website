@@ -1,0 +1,23 @@
+nonfiction:
+  - title:  "Godel, Escher, Bach: An Eternal Golden Braid"
+    author: Douglas Hofstadter
+    url:    false
+    desc:   false
+  - title:  Mind Design II
+    author: edited by John Haugeland
+    url:    false
+    desc:   false
+  - title:  The Master Algorithm
+    author: Pedro Domingos
+    url:    false
+    desc:   false
+  - title:  The Society of Mind
+    author: Marvin Minsky
+    url:    false
+    desc:   false
+  - title:  The Emotion Machine
+    author: Marvin Minsky
+    url:    false
+    desc:   false
+
+fiction:
