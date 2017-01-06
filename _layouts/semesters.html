@@ -1,49 +1,60 @@
 ---
-layout: default
+layout: page
 iter:   weekly
 ---
 
-<h1> {{ site.data.semesters[page.sem].words }} </h1>
+<section class="syllabus-section">
+  <h3> Syllabus </h3>
+  {% include __modules__/calendar.html reversed=false semester=page.sem %}
+</section>
 
-<h2> Syllabus </h2>
-{% include __modules__/calendar.html reversed=false semester=page.sem %}
+<section class="weekly-section">
+  <h3> Weekly Video &amp; Text </h3>
 
-<br />
-
-<br />
-
-<h2> Weekly Video &amp; Text </h2>
-
-<ul class="listing {{ layout.iter }}">
-{% for week in page.weekly %}
-  <li class="item">
-    <div class="card">
-      <span class="links">
-        <a href="{{ site.data.videos[item.video].url }}">
-          <span class="info weekly">
-            <h3 class="title weekly">
-              {{ site.data.videos[week.video].title | escape }}
-            </h3>
-            {% assign desc = site.data.videos[week.video].desc %}
-            {% if desc %}
-              <p class="desc weekly"> {{ desc | remove: '"' }} </p>
-            {% endif %}
-          </span>
-        </a>
-        <a href="{{ site.data.papers[item.paper].url }}">
-          <span class="info weekly">
-            <h3 class="title weekly">
-              {{ site.data.papers[week.paper].title | escape }}
-            </h3>
-            {% assign desc = site.data.papers[week.paper].desc %}
-            {% if desc %}
-              <p class="desc weekly"> {{ desc | remove: '"' }} </p>
-            {% endif %}
-          </span>
-        </a>
-      </span>
-      <span class="date weekly"> {{ week.date | date: "%x" }} </span>
-    </div>
-  </li>
-{% endfor %}
-</ul>
+  <ul class="listing weekly">
+  {% for week in page.weekly %}
+    {% assign video = site.data.videos[week.video] %}
+    {% assign paper = site.data.papers[week.paper] %}
+    <li class="item">
+      <div class="card">
+        <span class="links">
+          <a href="{{ video.url }}">
+            <span class="info">
+              <h3 class="title">
+                {% if video.url %}
+                  <i class="fa fa-external-link-square" aria-hidden="true"></i>
+                {% endif %}
+                {{ video.title | escape }}
+              </h3>
+              {% assign desc = video.desc %}
+              {% if desc %}
+                <p class="desc"> {{ desc | remove: '"' }} </p>
+              {% endif %}
+            </span>
+          </a>
+          <a href="{{ paper.url }}">
+            <span class="info">
+              <h3 class="title">
+                {% if paper.url %}
+                  <i class="fa fa-external-link-square" aria-hidden="true"></i>
+                {% endif %}
+                {{ paper.title | escape }}
+              </h3>
+              <p class="author">
+                by {{ paper.author | escape }}
+              </p>
+              {% assign desc = paper.desc %}
+              {% if desc %}
+                <p class="desc"> {{ desc | remove: '"' }} </p>
+              {% endif %}
+            </span>
+          </a>
+        </span>
+        <span class="date">
+          <time datetime="{{ week.date | date_to_xmlschema }}">{{ week.date | date: "%m/%d/%y" }}</time>
+        </span>
+      </div>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

@@ -22,7 +22,7 @@ email: ucfsigai@gmail.com
 description: >
   Using reinforcement training to build a community of artificial intelligence enthusiasts and practitioners in the UCF community and greater Orlando area.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ucfsigai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ucfsigai
 
 # Build settings
@@ -41,7 +41,7 @@ defaults:
   - scope:
       type: posts
     values:
-      layout: meeting
+      layout: post
       permalink: /:categories/:month/:day/
   - scope:
       type: pages

@@ -1,0 +1,40 @@
+.post-header, .post-content {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+
+}
+
+.post-meta {
+  font-size: 1em;
+  color: $grey-color;
+}
+
+div.meeting-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+
+  a.meeting-next, a.meeting-prev {
+    display: flex;
+    height: 3em;
+    margin: auto;
+    color: #ffffff;
+    padding: 0 1rem;
+    line-height: 3em;
+    border-radius: 4px;
+    flex-direction: row;
+    text-decoration: none;
+    vertical-align: middle;
+    background: lighten($background-color, 20%);
+    span {
+      margin: 0 0.5rem;
+    }
+    i.fa {
+      font-size: 1.2em;
+      margin: 0 0.5rem;
+      line-height: inherit;
+    }
+  }
+}

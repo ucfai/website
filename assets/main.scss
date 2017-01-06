@@ -4,18 +4,18 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Roboto","Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     1.5em;
 
 $heading:           #fff;
 $text-color:        #a2a2a2;
 $background-color:  #232c2f;
-//$background-color: #405057;
+// $background-color: #405057;
 // 3B768A
 // 1E8579
 // 68759E
@@ -33,14 +33,39 @@ $content-width:    980px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  display: flex;
+  flex-direction: column;
+
+  //@include media-query($on-laptop) {
+  //  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+  //  max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+  //  padding-right: $spacing-unit / 2;
+  //  padding-left: $spacing-unit / 2;
+  //}
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
 
 // Import partials from the `minima` theme.
 @import "minima";
@@ -50,3 +75,6 @@ $on-laptop:        800px;
 @import "calendar";
 @import "nav";
 @import "hackpack";
+
+@import "post";
+@import "text";

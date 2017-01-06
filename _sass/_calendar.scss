@@ -61,15 +61,15 @@ ul.listing, ul.listing.calendar, ul.listing.article {
     span.info {
       display: flex;
       flex-direction: column;
-      h3.title, p.desc {
+      h3.title, p.author, p.desc {
         margin: 0;
         font-size: 1rem;
       }
       h3.title {
         color: #31BAF5;
       }
-      p.desc {
-        color: darken(#31BAF5, 10%);
+      p.author, p.desc {
+        //color: darken(#31BAF5, 10%);
         color: #afafaf;
       }
     }
@@ -83,6 +83,7 @@ ul.listing, ul.listing.calendar, ul.listing.article {
       text-align: right;
       line-height: 2rem;
       color: #ffffff;
+      white-space: nowrap;
       background: lighten($background-color, 20%);
       border-radius: 4px;
     }

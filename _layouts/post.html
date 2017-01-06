@@ -4,15 +4,87 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    {% capture page_title %}
+      {{ page.title }}
+      {% if page.extra %}
+        &ndash; {{ page.extra }}
+      {% endif %}
+    {% endcapture %}
+    <h1 class="post-title" itemprop="name headline">
+      {{ page_title }}
+    </h1>
+    <p class="post-meta">
+      {{ page.tags[0] | capitalize }} •
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <section class="post-content" itemprop="articleBody">
     {{ content }}
-  </div>
+  </section>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+
+  <footer class="post-footer">
+    {% if page.reads %}
+
+    <h2> Suggested Weekly Reading </h2>
+
+    <ul class="listing meeting">
+      <li class="item">
+        <div class="card">
+          <span class="links">
+            <a href="{{ site.data.videos[page.reads.video].url }}">
+              <span class="info weekly">
+                <h3 class="title weekly">
+                  {{ site.data.videos[page.reads.video].title | escape }}
+                </h3>
+                {% assign desc = site.data.videos[page.reads.video].desc %}
+                {% if desc %}
+                  <p class="desc weekly"> {{ desc | remove: '"' }} </p>
+                {% endif %}
+              </span>
+            </a>
+            <a href="{{ site.data.papers[page.reads.paper].url }}">
+              <span class="info weekly">
+                <h3 class="title weekly">
+                  {{ site.data.papers[page.reads.paper].title | escape }}
+                </h3>
+                {% assign desc = site.data.papers[page.reads.paper].desc %}
+                {% if desc %}
+                  <p class="desc weekly"> {{ desc | remove: '"' }} </p>
+                {% endif %}
+              </span>
+            </a>
+          </span>
+        </div>
+      </li>
+    </ul>
+
+    {% endif %}
+
+    <div class="meeting-pagination">
+      {% unless page.previous.url == null %}
+        {% if page.previous.categories[1] == page.categories[1] %}
+        <a class="meeting-prev" href="{{ page.previous.url }}">
+          <i class="fa fa-arrow-left"></i>
+        </a>
+        {% endif %}
+      {% endunless %}
+
+
+      {% unless page.next.url == null %}
+        {% if page.next.categories[1] == page.categories[1] %}
+        <a class="meeting-next" href="{{ page.next.url }}">
+          <i class="fa fa-arrow-right"></i>
+        </a>
+        {% endif %}
+      {% endunless %}
+
+    </div>
+  </footer>
+
 </article>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

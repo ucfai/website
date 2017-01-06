@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: post
 ---
-
-<h1 class="title meeting"> {{ page.full }} </h1>
-{% assign today = page.date | date: "%x" %}
-<div class="tags">
-<p> {{ page.tags[0] | capitalize }} on {{ page.date | date: "%x" }} </p>
 
 {% assign match = "/meetings/{{ page.categories[1] }}/index.md" %}
 {% for p in site.pages %}
@@ -17,18 +12,3 @@ layout: default
 {{ lookup }}
 
 {{ content }}
-
-<h2> Suggested Weekly Reading </h2>
-
-
-{% unless page.previous.url == null %}
-<a href="{{ page.previous.url }}">
-  Previous
-</a>
-{% endunless %}
-
-{% unless page.next.url == null %}
-<a href="{{ page.next.url }}">
-  Next
-</a>
-{% endunless %}

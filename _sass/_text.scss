@@ -1,0 +1,115 @@
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5em;
+
+  @include media-query($on-laptop) {
+    font-size: 2.25em;
+  }
+}
+
+h2 {
+  font-size: 2.25em;
+
+  @include media-query($on-laptop) {
+    font-size: 1.75em;
+  }
+}
+
+h3 {
+  font-size: 1.675em;
+
+  @include media-query($on-laptop) {
+    font-size: 1.375em;
+  }
+}
+
+h4 {
+  font-size: 1.5em;
+
+  @include media-query($on-laptop) {
+    font-size: 1.125em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading;
+  line-height: 1.5;
+  font-weight: $base-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  transition: color 185ms ease-in-out;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $text-color;
+  }
+}
+
+blockquote {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul, ol {
+  margin: 0;
+  list-style-type: none;
+  li {
+    padding: 0;
+  }
+}
+
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

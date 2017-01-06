@@ -38,5 +38,14 @@
 
     {% endfor %}
 
+    {% if include.name != "home" %}
+    <li class="github-link">
+      <a href="http://github.com/{{ site.github_username }}">
+        <i class="fa fa-github"></i>
+        <span class="github"> {{ site.github_username }} </span>
+      </a>
+    </li>
+    {% endif %}
+
   </ul>
 </nav>

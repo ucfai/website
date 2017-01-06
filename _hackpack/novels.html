@@ -1,0 +1,19 @@
+---
+title: Novels
+---
+
+<section id="nonfiction-section">
+    <h2>Nonfiction</h2>
+
+    {% include __modules__/article.html
+        type="novels"
+        iter=site.data.novels.nonfiction %}
+</section>
+
+<section id="fiction-section">
+    <h2>Fiction</h2>
+
+    {% include __modules__/article.html
+        type="novels"
+        iter=site.data.novels.fiction %}
+</section>

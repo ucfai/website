@@ -13,31 +13,33 @@
   {% comment %} logic {% endcomment %}
 
   {% capture title %}
-    <em> {{ item.title }} </em>
+    <h3 class="title">
+      {% if item.url %}
+        <i class="fa fa-external-link-square" aria-hidden="true"></i>
+      {% endif %}
+      <em> {{ item.title }} </em>
+    </h3>
+  {% endcapture %}
+
+  {% capture author %}
     {% if item.author %}
-      &ndash; {{ item.author }}
+      <p class="author">by {{ item.author }}</p>
     {% endif %}
   {% endcapture %}
 
   {% capture desc %}
     {% if item.desc %}
-      <p class="desc {{ type }}"> {{ item.desc | remove: '"' }} </p>
-    {% endif %}
-  {% endcapture %}
-
-  {% capture url %}
-    {% if item.url %}
-      <span class="date {{ type }}"> Link </span>
+      <p class="desc"> {{ item.desc | remove: '"' }} </p>
     {% endif %}
   {% endcapture %}
 
   <li class="item">
-    <a class="card {{ type }}" href="{{ item.url }}">
-      <span class="info {{ type }}">
-        <h3 class="title {{ type }}"> {{ title }} </h3>
+    <a class="card" href="{% if item.url %}{{ item.url }}{% endif %}">
+      <span class="info">
+        {{ title }}
+        {{ author }}
         {{ desc }}
       </span>
-      {{ url }}
     </a>
   </li>
 
