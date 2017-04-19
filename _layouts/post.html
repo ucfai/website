@@ -15,11 +15,25 @@ layout: default
     </h1>
     <p class="post-meta">
       {{ page.tags[0] | capitalize }} •
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> •
+      <a class="href-alt" href="https://docs.google.com/presentation/d/{{ page.slides }}/pub?start=false&loop=true&delayms=30000"> Slides </a>
     </p>
   </header>
 
   <section class="post-content" itemprop="articleBody">
+    <blockquote> <strong>TL;DR:</strong> {{ page.tldr }} </blockquote>
+
+    <iframe src="https://docs.google.com/presentation/d/{{ page.slides }}/embed?start=false&loop=true&delayms=30000"
+            frameborder="0"
+            width="960"
+            height="569"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+    </iframe>
+    <br />
+    <br />
+    <h2 id="writeup"> Writeup </h2>
     {{ content }}
   </section>
 

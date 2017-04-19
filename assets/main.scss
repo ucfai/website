@@ -13,25 +13,27 @@ $base-line-height: 1.5;
 $spacing-unit:     1.5em;
 
 $heading:           #fff;
-$text-color:        #a2a2a2;
-$background-color:  #232c2f;
+$text-color:        #fefefe;
+$background-color:  #131c1f;
 // $background-color: #405057;
 // 3B768A
 // 1E8579
 // 68759E
 // 735A8C
 // 785585
-$brand-color:      #2a7ae2;
+$brand-color:      #ffc904;
+//$brand-color:      #2a7ae2;
+$brand-color-alt: #40caff;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    980px;
+$content-width:    960px;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        960px;
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -45,8 +47,8 @@ dl, dd, ol, ul, figure {
 }
 
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: -webkit-calc(#{$content-width} + (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} + (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -78,3 +80,4 @@ img {
 
 @import "post";
 @import "text";
+@import "split";

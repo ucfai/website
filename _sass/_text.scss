@@ -57,7 +57,6 @@ ul, ol, dl, figure,
 }
 
 a {
-  color: $brand-color;
   text-decoration: none;
   transition: color 185ms ease-in-out;
 
@@ -112,4 +111,12 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+h1, h2, a {
+  color: $brand-color;
+}
+
+a.href-alt {
+  color: $brand-color-alt;
 }

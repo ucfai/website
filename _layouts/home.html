@@ -8,18 +8,16 @@
     {% include __modules__/nav.html name="home" %}
 
     <main aria-label="Content">
-      <div id="home">
-        <div id="home-content">
-          <div id="home-content-text">
-            {{ content }}
-          </div>
-          <div id="home-content-calendar">
-            {% include __modules__/calendar.html semester=site.sem %}
+      <div class="transition-slide" id="home">
+          <div class="slide-container">
+              <div class="slide-left" id="home-content-text">
+                {{ content }}
+              </div>
+              <div class="slide-right" id="home-content-calendar">
+                {% include __modules__/calendar.html semester=site.sem %}
+              </div>
           </div>
         </div>
-        <div id="home-gradient"> </div>
-        <div id="home-picture" > </div>
-      </div>
     </main>
 
   </body>
