@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">{{ include.sem.title }}</h4>
+        <p class="card-text">{{ include.sem.desc }}</p>
+    </div>
+    <div class="card-body">
+    {% assign cnt = 1 %}
+    {% for post in site.posts reversed %}
+        {% if post.categories[1] == site.semester and post.categories[2] == include.sem.unit %}
+            <a class="btn btn-primary" href="{{ post.url }}">
+                {{ post.type | capitalize }} on <span>{{ post.date | date: "%b %d" }}</span>
+                {% assign cnt = cnt | plus: 1 %}
+            </a>
+            {% if cnt > 3 %} {% break %} {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>

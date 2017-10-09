@@ -1,8 +1,0 @@
-- name: This Semester
-  url:  /meetups
-- name: Past Meetups
-  url:  /meetups
-  folder: true
-- name: Hackpack
-  url:  /hackpack
-  folder: true

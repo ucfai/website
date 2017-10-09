@@ -1,0 +1,18 @@
+global:
+- title:  Now
+  url:    /now
+- title:  Hackpack
+  url:    /hackpack
+- title:  Archives
+  url:    /archives
+- title:  Club
+  url:    /club
+- title:  FAQs
+  url:    /faqs
+
+hackpack:
+  - papers
+  - novels
+  - textbooks
+  - moocs
+  - tutorials

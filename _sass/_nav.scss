@@ -1,110 +1,52 @@
-nav {
-  top: 0;
-  left: 0;
-  padding: 1em 0;
-  z-index: 100000;
-  position: relative;
-
-  ul#site-navigation {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-
-    li.site-logo {
-      max-width: calc(2 * 0.5em + 1.5 * 1.2em);
-      max-height: calc(2 * 0.5em + 1.5 * 1.2em);
-      position: relative;
-      z-index: 100000;
-      margin-right: 0.5em;
-    }
-
-    li.page-link {
-      position: relative;
-      margin-right: 0.5em;
-      &:hover {
-        a.single, span.dropdown-toggle {
-          //background: rgba(23, 45, 75, 0.4);
-          //background: rgba(95, 113, 132, 0.4);
-          background: #3b4851;
-        }
-      }
-      a, span.dropdown-toggle {
-        cursor: pointer;
-        padding: 0.5em 0.75em;
-        display: block;
-        color: #fefefe;
-        font-size: 1.2em;
-        font-weight: 500;
-        border-radius: 4px;
-        line-height: 1.5;
-        text-decoration: none;
-        position: relative;
-        transition: 185ms ease-in-out;
-
-        i.fa {
-          padding-right: 0.25em;
-        }
-      }
-
-      span.dropdown-toggle {
-        border-radius: 0;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-      }
-
-      ul.dropdown {
-        margin: 0;
-        display: none;
-        min-width: 100%;
-        padding: 0.5em 0;
-        position: absolute;
-        list-style-type: none;
-        background: #3b4851;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        li a {
-          margin: 0;
-          border-radius: 0;
-          font-size: 1.15em;
-          padding: 0.25em 1em;
-          &:hover {
-            background: lighten($background-color, 50%);
-          }
-        }
-      }
-    }
-
-    li.github-link {
-      display: flex;
-      margin-left: auto;
-      a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        &:hover {
-          i, span {
-            color: #4078c0;
-          }
-        }
-        i.fa-github {
-          color: #999;
-          font-size: 2.4em;
-        }
-        span.github {
-          color: #fefefe;
-          margin-left: 0.5rem;
-        }
-      }
-    }
-  }
-}
-
-nav#home {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  flex-direction: column;
-  background: transparent;
-}
+//header {
+//  box-sizing: border-box;
+//  max-height: 60px;
+//  display: flex;
+//  justify-content: space-between;
+//  padding: 1.5 * $base-unit 2 * $base-unit;
+//
+//  a {
+//    text-decoration: none;
+//    p#title {
+//      font-size: 1.1666666667 * $base-unit;
+//      font-weight: 800;
+//      margin: 0;
+//      color: #fefefe;
+//      //line-height: 4 * $base-unit;
+//      font-family: "PT Sans", "Source Sans Pro", sans-serif;
+//      span {
+//        color: #f8c700;
+//      }
+//    }
+//  }
+//
+//  nav {
+//    ul {
+//      display: flex;
+//      padding: 0;
+//      margin: 0;
+//      li {
+//        list-style: none;
+//        margin: 0 0.5 * $base-unit;
+//        a {
+//          color: #fefefe;
+//          font-weight: 600;
+//          border-radius: 2px;
+//          text-decoration: none;
+//          font-size: 1.1666666667 * $base-unit;
+//          padding: 0.5 * $base-unit $base-unit;
+//          -webkit-transition: ease-in-out 256ms;
+//          -moz-transition: ease-in-out 256ms;
+//          -ms-transition: ease-in-out 256ms;
+//          -o-transition: ease-in-out 256ms;
+//          transition: ease-in-out 256ms;
+//          &:hover {
+//            color: #b3bee1;
+//            background: #1b2225;
+//          }
+//        }
+//      }
+//    }
+//  }
+//
+//}

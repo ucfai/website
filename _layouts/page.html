@@ -1,15 +1,5 @@
 ---
-layout: default
+layout: base
 ---
-
-<header class="page-header">
-    <h1>
-        {% if page.sem %}
-            {{ site.data.semesters[page.sem].words }}
-        {% else %}
-            {{ page.title }}
-        {% endif %}
-    </h1>
-</header>
 
 {{ content }}

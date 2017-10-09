@@ -1,0 +1,46 @@
+---
+layout: page
+title:  About Us
+---
+
+<h1 class="h1"> {{ page.title }} </h1> <hr>
+<div class="row">
+  <div class="col-12">
+    <h2 class="h2"> Leadership </h2>
+    <div class="row mb-5 justify-content-around">
+      {% for lead in site.data.leadership %}
+        <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3 d-flex">
+          <div class="card" style="flex: 1;">
+            <img class="card-img-top" src="{{ lead.img | prepend: '/assets/images/leads/' }}" alt="{{ lead.name }}">
+            <div class="card-body">
+              <h4 class="card-title"> {{ lead.name }} </h4>
+              <h6 class="card-subtitle text-muted"> {{ lead.position }} </h6>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="col-12">
+    <h2 class="h2"> Mission </h2>
+    <div class="card mb-5">
+      <div class="card-body">
+        {{ site.description }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12">
+    <h2 class="h2"> Sponsorship </h2>
+    <div class="row mb-5">
+      {% for sponsor in site.data.sponsors %}
+      <div class="col-lg-6 col-md-6 col-12 mt-3 mb-3 d-flex">
+        <a class="card p-3 border-0 d-flex bg-transparent" style="flex: 1; box-sizing: border-box; max-height: 200px; vertical-align: middle;" href="{{ sponsor.link }}">
+          <img class="card-img-top" src="{{ sponsor.img | prepend: '/assets/images/sponsors/' }}" alt="{{ sponsor.name }}" style="max-height: calc(200px - 2rem);">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

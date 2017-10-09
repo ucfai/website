@@ -1,16 +1,24 @@
-fa16:
-  words:  Fall 2016
-  start:  08-22-2016
-  end:    12-12-2016
-sp17:
-  words:  Spring 2017
-  start:  01-09-2016
-  end:    05-05-2016
+list:
+- fa17
+
 fa17:
-  words:  Fall 2017
-  start:  false
-  end:    false
+  - title:  "U0: Neural Networks"
+    desc:   >
+      This series introduces you to SIGAI. Once we've done that, we'll work on getting you from zero to hero with vanilla Neural Networks, primarily for classification.
+    unit:   "neural-networks"
+
+  - title:  "U1: Reinforcement Learning"
+    desc:   >
+      This series gets you into the basics of Reinforcement Learning and showcases it's relative power compared to other machine learning domains, like supervised and unsupervised learning.
+    unit:   "reinforcement-learning"
+
+  - title:  "U2: Advanced Topics"
+    desc:   >
+      This series introduces some more advanced topics and scratches the surface to, potentially, pique your interest in their capabilities.
+    unit:   "advanced-topics"
+
 sp18:
-  words:  Spring 2018
-  start:  false
-  end:    false
+  - title:  "U0: Neural Networks"
+    desc:   >
+      This series introduces you to SIGAI. Once we've done that, we'll work on getting you from zero to hero with vanilla Neural Networks, primarily for classification.
+    unit:   "neural-networks"

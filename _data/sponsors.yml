@@ -1,0 +1,9 @@
+- name: "National Science Foundation"
+  acro: "NSF"
+  img:  "nsf.svg"
+  link: "https://nsf.gov/"
+
+- name: "Center for Brains, Minds, & Machines"
+  acro: "CBMM"
+  img:  "cbmm.svg"
+  link: "http://cbmm.mit.edu/"

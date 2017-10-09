@@ -1,0 +1,82 @@
+//p#mission {
+//  color: #fefefe;
+//  text-align: center;
+//  padding: 2 * $base-unit $base-unit;
+//  span {
+//    color: #f8c700;
+//  }
+//}
+//
+//h1[id^="semester-schedule"] {
+//  color: #fefefe;
+//  font-weight: 600;
+//  text-align: center;
+//}
+//
+//article.unit-card {
+//  padding: 1rem;
+//  color: #fefefe;
+//  background: #31333d;
+//  margin-bottom: 2 * $base-unit;
+//  border-radius: 0.75 * $base-unit;
+//  &:last-child {
+//    margin-bottom: 0;
+//  }
+//  h2.unit-title {
+//    margin: 0;
+//    color: #fefefe;
+//    font-weight: 600;
+//    font-size: 2 * $base-unit;
+//  }
+//  h4.unit-description {
+//    margin: 0;
+//    color: #7a7e8b;
+//    font-weight: 500;
+//    min-height: 5 * 1.5 * $base-unit;
+//  }
+//  ul.unit-dates {
+//    list-style: none;
+//    padding: 0;
+//    margin: 0;
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: space-between;
+//    li.unit-meet {
+//      width: 100%;
+//      display: block;
+//      max-width: 33.3%;
+//      margin: 0 0.5rem;
+//      a.unit-meet {
+//        cursor: pointer;
+//        border-radius: 0.75 * $base-unit;
+//        border: 1px solid #5a5e6d;
+//        text-align: center;
+//        display: block;
+//        width: 100%;
+//        padding: 0.5rem 0;
+//        border-radius: 0.75 * $base-unit;
+//        color: #fefefe;
+//        text-decoration: none;
+//      }
+//      span {
+//        color: #F8C700;
+//      }
+//    }
+//  }
+//}
+//
+//article.unit-card.active {
+//  background: #7a7e8b;
+//  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+//  h2.unit-title {
+//    color: #22242e;
+//  }
+//  h4.unit-description {
+//    color: #22242e;
+//  }
+//  ul.unit-dates {
+//    li.unit-meet {
+//      border-color: #5A5E6D;
+//    }
+//  }
+//}

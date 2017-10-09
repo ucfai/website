@@ -1,7 +1,21 @@
-<header class="site-header" role="banner">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex sticky-top">
 
-  <div class="wrapper">
-    {% include __modules__/nav.html name=page.title %}
+  <a class="navbar-brand" href="/">
+    <span class="sigai-brand">SIGAI<span>@UCF</span></span>
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseable" aria-controls="navbarCollapseable" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navbarCollapseable">
+    <div class="navbar-nav">
+      {% for li in site.data.nav.global %}
+        {% assign lookup = page.url | remove: '/' %}
+      <a class="nav-item nav-link d-flex flex-column justify-content-center{% if page.url contains li.url or (lookup == site.meta.semester and li.url == '/now') or (site.data.semesters.list contains lookup and lookup != site.meta.semester and li.url == '/archives') %} active{% endif %}"
+         href="{{ li.url | prepend: site.baseurl }}">{{ li.title }}</a>
+      {% endfor %}
+    </div>
   </div>
 
-</header>
+</nav>

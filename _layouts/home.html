@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: base
+---
 
-  {% include head.html %}
-
-  <body>
-
-    {% include __modules__/nav.html name="home" %}
-
-    <main aria-label="Content">
-      <div class="transition-slide" id="home">
-          <div class="slide-container">
-              <div class="slide-left" id="home-content-text">
-                {{ content }}
-              </div>
-              <div class="slide-right" id="home-content-calendar">
-                {% include __modules__/calendar.html semester=site.sem %}
-              </div>
-          </div>
-        </div>
-    </main>
-
-  </body>
-
-</html>
+<section class="container">
+    {{ content }}
+</section>
