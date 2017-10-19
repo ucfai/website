@@ -1,0 +1,13 @@
+#post-nav.nav.nav-pills {
+    background-color: #3e4247;
+    border-color: #5d646c!important;
+    .list-group-item {
+        // background-color: #4c5056;
+        a {
+            color: #b2bac4;
+            &:hover {
+                color: #3e94ff;
+            }
+        }
+    }
+}

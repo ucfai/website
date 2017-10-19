@@ -5,41 +5,33 @@ layout: base
 {% capture event  %}{{ page.links.event }}{% endcapture %}
 
 <div class="row">
-  <div class="col-3">
-    <div class="list-group">
-      <div class="list-group-item list-group-item-action list-group-item-info"> {{ page.title }} </div>
-      {% unless slides == "" %}
-      <a class="list-group-item list-group-item-action" href="https://docs.google.com/presentation/d/{{ page.links.slide }}"> Google Slides</a>
-      {% endunless %}
-
-      {% unless event == "" %}
-      <a class="list-group-item list-group-item-action" href="https://www.facebook.com/events/{{ page.links.event }}"> Facebook Event </a>
-      {% endunless %}
-
-      <a class="list-group-item list-group-item-action" href="{{ site.meta.sign_in_url }}"> Record Your Attendance </a>
-    </div>
-    
-    <nav class="mt-5">
-      <ul class="pagination pagination-lg justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="{{ page.previous.url }}" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="{{ page.next.url }}" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="col-9">
+  <div class="col-12 pb-5 mx-auto">
     <h1 class="h1"> <strong>{{ page.type | capitalize }}</strong>: {{ page.title }} </h1> <hr>
-    <p>Given on {{ page.date | date: "%b %d, %Y" }}</p>
+    <nav class="navbar mb-3">
+      <p class="navbar-text m-0">Given on {{ page.date | date: "%b %d, %Y" }}</p>
+
+      <div class="d-flex align-self-center">
+        {% unless slides == "" %}
+        <a class="navbar-item nav-link" href="https://docs.google.com/presentation/d/{{ page.links.slide }}"> Slides</a>
+        {% endunless %}
+
+        {% unless event == "" %}
+        <a class="navbar-item nav-link" href="https://www.facebook.com/events/{{ page.links.event }}"> Event </a>
+        {% endunless %}
+
+        <a class="nav-item nav-link" href="{{ site.meta.sign_in_url }}"> Sign-In </a>
+      </div>
+
+      <div class="pagination align-self-end">
+        <a class="nav-item nav-link align-self-start" href="{{ page.previous.url }}" aria-label="Previous">
+          <i class="fa fa-chevron-left"> </i>
+        </a>
+
+        <a class="nav-item nav-link" href="{{ page.next.url }}" aria-label="Next">
+          <i class="fa fa-chevron-right"> </i>
+        </a>
+      </div>
+    </nav>
     
     <div class="alert alert-dark">
       <strong> <em>Summary:</em> </strong>

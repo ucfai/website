@@ -65,3 +65,12 @@ body.bg-sigai-dark {
 hr {
   border-color: #3a3d43;
 }
+
+.navbar-toggler {
+  border: 0;
+  &:before {
+    content: "menu";
+    font-weight: bold;
+    font-family: "PT-Sans", sans-serif;
+  }
+}
