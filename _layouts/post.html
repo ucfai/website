@@ -1,14 +1,22 @@
 ---
 layout: base
 ---
+{% capture slides %}{{ page.links.slide }}{% endcapture %}
+{% capture event  %}{{ page.links.event }}{% endcapture %}
 
 <div class="row">
   <div class="col-3">
     <div class="list-group">
-        <div class="list-group-item list-group-item-action list-group-item-info"> {{ page.title }} </div>
-        <a class="list-group-item list-group-item-action" href="https://docs.google.com/presentation/d/{{ page.links.slide }}"> Google Slides</a>
+      <div class="list-group-item list-group-item-action list-group-item-info"> {{ page.title }} </div>
+      {% unless slides == "" %}
+      <a class="list-group-item list-group-item-action" href="https://docs.google.com/presentation/d/{{ page.links.slide }}"> Google Slides</a>
+      {% endunless %}
+
+      {% unless event == "" %}
       <a class="list-group-item list-group-item-action" href="https://www.facebook.com/events/{{ page.links.event }}"> Facebook Event </a>
-      </ul>
+      {% endunless %}
+
+      <a class="list-group-item list-group-item-action" href="{{ site.meta.sign_in_url }}"> Record Your Attendance </a>
     </div>
     
     <nav class="mt-5">
@@ -38,7 +46,9 @@ layout: base
       {{ page.excerpt }}
     </div>
     
+    {% unless slides == "" %}
     <iframe src="https://docs.google.com/presentation/d/{{ page.links.slide }}/embed?start=false&loop=true" width="100%" height="51.7%" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="rounded"></iframe>
+    {% endunless %}
     
     {{ content }}
   </div>

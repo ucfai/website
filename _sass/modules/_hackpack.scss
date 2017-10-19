@@ -1,0 +1,86 @@
+.hackpack-nav {
+    // background-color: #4c5056;
+    background-color: #3e4247;
+    border-color: #5d646c!important;
+    a {
+        color: #b2bac4;
+        &:hover {
+            color: #3e94ff;
+        }
+    }
+}
+
+.btn-papers {
+    &:after {
+        color: #fff;
+        content: "Paper";
+    }
+    background-color: #00b3ee!important;
+}
+
+.btn-moocs {
+    &:after {
+        color: #fff;
+        content: "MOOC";
+    }
+    background-color: #078c8c!important;
+    // background-color: #3c5d5d!important;
+}
+
+.btn-textbooks-specific {
+    &:after {
+        color: #fff;
+        content: "Specific Textbook";
+    }
+    background-color: #20c997!important;
+}
+
+.btn-textbooks-general {
+    &:after {
+        color: #fff;
+        content: "General Textbook";
+    }
+    background-color: #e36209!important;
+}
+
+.btn-tutorials-youtube {
+    &:after {
+        color: #fff;
+        content: "YouTube";
+    }
+    background-color: #ff5231!important;
+}
+
+.btn-tutorials-blogs {
+    &:after {
+        color: #fff;
+        content: "Blog";
+    }
+    background-color: #14bb7d!important;
+    // background-color: #ffd33d!important;
+}
+
+.btn-novels-nonfiction {
+    &:after {
+        color: #fff;
+        content: "Nonfiction Novel";
+    }
+    background-color: #a05bec!important;
+    // background-color: #007bff!important;
+}
+
+.btn-novels-fiction {
+    &:after {
+        color: #fff;
+        content: "Fictional Novel";
+    }
+    background-color: #e83e8c!important;
+}
+
+.btn-hackpack-link {
+    &:after {
+        content: "Find it here";
+        color: #388ae2;
+    }
+    background-color: #2d353a;
+}

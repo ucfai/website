@@ -1,0 +1,14 @@
+.ucfsigai-brand {
+    &:before, &:after {
+        font-weight: bold;
+        font-family: "PT Sans", sans-serif !important;
+    }
+    &:before {
+        content: "SIGAI";
+        color: #ffffff;
+    }
+    &:after {
+        content: "@UCF";
+        color: #ffc904;
+    }
+}

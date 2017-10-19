@@ -3,7 +3,7 @@ layout: page
 title: FAQs
 ---
 
-<div class="card mb-5">
+<div class="card card-dark mb-5">
   <h4 class="card-header"> When [and where] do you meet? </h4>
   <div class="card-body">
     <p class="card-text"> We meet just about every <span class="text-gold">{{ site.meta.meet_day }}</span> at <span
@@ -14,7 +14,7 @@ title: FAQs
 
 
 {% assign sponsors = site.data.sponsors | map: 'acro' %}
-<div class="card mb-5">
+<div class="card card-dark mb-5">
   <h4 class="card-header"> Do I need to pay dues? </h4>
   <div class="card-body">
     <p class="card-text"> Nope! Because we're sponsored by the {{ sponsors | array_to_sentence_string }}, we're able to
@@ -23,18 +23,18 @@ title: FAQs
 </div>
 
 
-<div class="card mb-5">
+<div class="card card-dark mb-5">
   <h4 class="card-header"> How do I get setup for workshops? </h4>
   <div class="card-body">
     <p class="card-text"> To avoid mis-copying the installation instructions, please follow the instructions that Docker
       has outlined. (They're linked in the headings. If any links are broken, please inform the coordinators about which
       are.) </p>
   </div>
-  <ul class="list-group list-group-flush bg-warning">
-    <li class="list-group-item"><strong>NOTE:</strong> We apologize for the inconvenience, but until Docker expands it's
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item bg-transparent"><strong>NOTE:</strong> We apologize for the inconvenience, but until Docker expands it's
       support for Windows 10 beyond the Pro, Education, and Enterprise editions; we won't support Windows.
     </li>
-    <li class="list-group-item"><strong>NOTE:</strong> Docker only supports 64-bit systems across all OSes.</li>
+    <li class="list-group-item bg-transparent"><strong>NOTE:</strong> Docker only supports 64-bit systems across all OSes.</li>
   </ul>
   <div class="card-body">
     <h3 id="1-installing-docker-and-docker-compose">1. Installing <code class="highlighter-rouge">docker</code> (and <code

@@ -1,12 +1,11 @@
 <html>
   {% include head.html %}
 
-  <body class="bg-sigai-dark">
-    {% include header.html %}
+  <body class="row bg-sigai-dark">
+    {% include header2.html %}
     <main class="container{% if layout.style != 'hackpack' %} pt-5{% endif %}">
       {{ content }}
     </main>
-    {% include footer.html %}
   </body>
 
 </html>

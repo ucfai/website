@@ -1,7 +1,18 @@
-<div class="row pb-5 justify-content-around">
+<div class="row pb-5">
   {% for item in include.list1 %}
   <div class="col-lg-4 col-md-6 col-12 mt-3 mb-3 d-flex">
-    <div class="card border-{{ include.type1 }}" style="flex: 1;">
+    <div class="card card-dark" style="flex: 1;">
+      {% if include.type1 == "papers" %}
+      <div class="card-header justfiy-content-start">
+        <div class="btn-group">
+          {% for diff in item.tags %}
+          <div class="btn btn-secondary btn-sm disabled">
+            {{ site.data.hackpack_papers.shorthand[diff] }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
       <div class="card-body">
         <h4 class="card-title">{{ item.title }}</h4>
         {% if item.author %}
@@ -13,26 +24,10 @@
           <p class="card-text pt-2"> {{ item.desc }} </p>
         {% endif %}
       </div>
-      {% if include.type1 == "papers" %}
       <div class="card-footer d-flex justify-content-between">
-        <div class="btn-group">
-          {% for diff in item.tags %}
-          <div class="btn btn-secondary btn-sm disabled">
-            {{ site.data.hackpack_papers.shorthand[diff] }}
-          </div>
-          {% endfor %}
-        </div>
-        <a class="btn btn-primary btn-sm" href="{{ item.link }}">
-          Find it here
-        </a>
+        <div class="btn btn-sm btn-{{ include.type1 }}"></div>
+        <a class="btn btn-sm btn-hackpack-link" href="//{{ item.link }}"></a>
       </div>
-      {% else %}
-      <div class="card-footer d-flex justify-content-end">
-        <a class="btn btn-primary btn-sm" href="{{ item.link }}">
-          Find it here
-        </a>
-      </div>
-      {% endif %}
     </div>
   </div>
   {% endfor %}
@@ -40,7 +35,7 @@
   {% if include.list2 %}
     {% for item in include.list2 %}
     <div class="col-lg-4 col-md-6 col-12 mt-3 mb-3 d-flex">
-      <div class="card border-{{ include.type2 }}" style="flex: 1;">
+      <div class="card card-dark" style="flex: 1;">
         <div class="card-body">
           <h4 class="card-title">{{ item.title }}</h4>
           {% if item.author %}
@@ -52,10 +47,9 @@
           <p class="card-text pt-2"> {{ item.desc }} </p>
           {% endif %}
         </div>
-        <div class="card-footer d-flex justify-content-end">
-          <a class="btn btn-primary btn-sm" href="{{ item.link }}">
-            Find it here
-          </a>
+        <div class="card-footer d-flex justify-content-between">
+          <div class="btn btn-sm btn-{{ include.type2 }}"></div>
+          <a class="btn btn-sm btn-hackpack-link" href="//{{ item.link }}"></a>
         </div>
       </div>
     </div>

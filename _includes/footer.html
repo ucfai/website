@@ -1,9 +1,9 @@
 <footer class="container-fluid bg-dark navbar-dark">
   <div class="container p-5">
     <div class="row">
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-6">
         <a class="navbar-brand m-0 d-block" href="{{ site.baseurl }}">
-          <span class="sigai-brand h1 pb-3 d-flex m-0">SIGAI<span>@UCF</span></span>
+          <span class="ucfsigai-brand h1 pb-3 d-flex m-0"></span>
         </a>
         <div class="btn-group btn-group-lg d-flex">
           <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="https://github.com/{{ site.social.gh }}">
@@ -21,22 +21,10 @@
         </div>
       </div>
   
-      <div class="col-12 col-lg-4">
-        <div class="col-9 mx-auto">
-          <nav class="navbar-nav flex-column">
-            {% for li in site.data.nav.global %}
-            {% assign lookup = page.url | remove: '/' %}
-            <a class="nav-item nav-link d-flex flex-column justify-content-center{% if page.url contains li.url or (lookup == site.meta.semester and li.url == '/now') or (site.data.semesters.list contains lookup and lookup != site.meta.semester and li.url == '/archives') %} active{% endif %}"
-               href="{{ li.url | prepend: site.baseurl }}">{{ li.title }}</a>
-            {% endfor %}
-          </nav>
-        </div>
-      </div>
-  
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-6">
         <p class="text-muted"> {{ site.meta.mission }} </p>
-        <p class="text-white"> We meet just about every <span>{{ site.meta.meet_day }}</span> at <span>{{ site.meta.meet_time }}</span>.
-          Always in <span>{{ site.meta.mtg_room }}</span>. (<a class="text-gold" href="/">Check the schedule here.</a>) </p>
+        <p class="text-white"> We meet just about every <span class="text-gold">{{ site.meta.meet_day }}</span> at <span class="text-gold">{{ site.meta.meet_time }}</span>.
+          Always in <span class="text-gold">{{ site.meta.mtg_room }}</span>. (<a class="text-gold" href="/">Check the schedule here.</a>) </p>
       </div>
     </div>
   </div>

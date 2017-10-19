@@ -12,64 +12,56 @@ html {
   position: relative;
 }
 
+* {
+  // color: #818b95;
+  color: #b2bac4;
+}
+
 body {
+  color: #b2bac4;
   margin: 0;
 }
 
 nav {
- min-height: 4rem;
+  min-height: 4rem;
+}
+
+.site-nav {
+  background-color: #1c2227!important;
 }
 
 main {
   min-height: calc(100vh - 5rem);
 }
 
-.sigai-brand {
-  font-weight: bold;
-  font-family: "PT Sans", sans-serif !important;
-  color: #ffffff;
-  span {
-    color: #ffc904;
-  }
-}
-
 .text-gold {
-  color: #ffc904;
+  color: #ffc904!important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", sans-serif !important;
   font-weight: bold !important;
+  color: #b2bac4;
 }
 
-.border-papers {
-  border-color: #00b3ee;
+.bg-sigai-dark {
+  background: #2f3239;
 }
 
-.border-moocs {
-  border-color: #3c5d5d;
+.card-dark, .alert-dark {
+  color: #b2bac4;
+  background: #4c5056;
+  border-color: #5d646c;
 }
 
-.border-textbooks-specific {
-  border-color: #20c997;
+body.bg-sigai-dark {
+  .card {
+    .card-header {
+      background: #3e4247;
+    }
+  }
 }
 
-.border-textbooks-general {
-  border-color: #e36209;
-}
-
-.border-tutorials-youtube {
-  border-color: #ff5231;
-}
-
-.border-tutorials-blogs {
-  border-color: #ffd33d;
-}
-
-.border-novels-nonfiction {
-  border-color: #007bff;
-}
-
-.border-novels-fiction {
-  border-color: #e83e8c;
+hr {
+  border-color: #3a3d43;
 }

@@ -1,17 +1,17 @@
 - name:     Felix Sosa
   position: Director
-  img:      /img/leads/flxsosa.png
+  img:      flxsosa.jpg
   gh:       flxsosa
   web:      http://web.mit.edu/fsosa/www
 
 - name:     John Muchovej
   position: Coordinator
-  img:      /img/leads/ionlights.png
+  img:      ionlights.jpg
   gh:       ionlights
   web:      https://ionlights.github.io
 
 - name:     Richard DiBacco
   position: Coordinator
-  img:      /img/leads/thedibaccle.png
+  img:      thedibaccle.jpg
   gh:       thedibaccle
   web:

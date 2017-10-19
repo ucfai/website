@@ -3,7 +3,7 @@
 <div class="row pb-5">
   {% for meeting in site.data.semesters[include.sem] %}
   <div class="col-lg-4 col-md-6 col-12 mt-3 mb-3 d-flex">
-    <div class="card" style="flex: 1;">
+    <div class="card card-dark" style="flex: 1;">
       <h4 class="card-header">{{ meeting.title }}</h4>
       <div class="card-body">
         <p class="card-text">{{ meeting.desc }}</p>
@@ -14,11 +14,11 @@
             {% if post.categories[0] == include.sem and post.tags[0] == meeting.unit %}
               {% if post.date < today %}
               <a class="btn btn-secondary" href="{{ post.url }}">
-                {{ post.type | capitalize }} on <span>{{ post.date | date: "%b %d" }}</span>
+                 {{ post.type | capitalize }} on <span class="text-gold">{{ post.date | date: "%b %d" }}</span>
               </a>
               {% else %}
               <div class="btn btn-secondary">
-                {{ post.type | capitalize }} on <span>{{ post.date | date: "%b %d" }}</span>
+                {{ post.type | capitalize }} on <span class="text-gold">{{ post.date | date: "%b %d" }}</span>
               </div>
               {% endif %}
             {% endif %}

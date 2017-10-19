@@ -1,27 +1,28 @@
 # Meta information for club stuff
 meta:
-  semester:   fa17
-  meet_day:   Wednesday
-  meet_time:  7:30pm
-  mtg_room:   VAB 113
-  mission:    We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
+  semester:     fa17
+  meet_day:     Wednesday
+  meet_time:    7:30pm
+  mtg_room:     VAB 113
+  mission:      We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
+  sign_in_url:  https://docs.google.com/forms/d/e/1FAIpQLScLRmQIo3MnEjgPY38y2_nXJMrJ8yQh48qXywEY7Jp3XuMtBA/viewform
 
 
-title: Brains, Minds, & Machines @ UCF
-email: bmm.ucf@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+title: SIGAI@UCF
+email: ucfsigai@gmail.com
+description: >
   We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://ucfsigai.github.io"
 
 social:
-  gh:     ucfsigai
-  yt:     channel/UCSraILnIqJ-4oqCPp-VzxWQ
-  fbg:    ucfsigai
-  fbp:    ucfsigai
-  slack:  sig_ai
+  gh:     https://github.com/ucfsigai
+  yt:     https://youtube.com/channel/UCSraILnIqJ-4oqCPp-VzxWQ
+  fbg:    https://facebook.com/groups/ucfsigai
+  fbp:    https://facebook.com/ucfsigai
+  slack:  https://acmatucf.slack.com/messages/C0PK124LS/team/U1YFXT695/
 
-# Build settings
+# build settings
 future: true
 markdown: kramdown
 permalinks: pretty
@@ -48,3 +49,24 @@ defaults:
     values:
       layout: "semester-master"
       permalink:  /:title/
+
+
+nav:
+  global:
+  - title:  Now
+    url:    /now
+  - title:  Hackpack
+    url:    /hackpack
+  - title:  Archives
+    url:    /archives
+  - title:  Club
+    url:    /club
+  - title:  FAQs
+    url:    /faqs
+
+  hackpack:
+    - papers
+    - novels
+    - textbooks
+    - moocs
+    - tutorials
