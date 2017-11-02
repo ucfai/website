@@ -70,3 +70,8 @@ nav:
     - textbooks
     - moocs
     - tutorials
+
+plugins:
+    - jekyll-avatar
+    - jemoji
+    - jekyll-pages-directory
