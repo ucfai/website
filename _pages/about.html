@@ -1,0 +1,44 @@
+---
+layout:     page
+title:      About Us
+permalink:  /about/
+---
+
+<h1 class="h1"> {{ page.title }} </h1> <hr>
+<div class="row pt-3">
+  <div class="col-12 pb-5">
+    <!-- <h2 class="h2"> Mission </h2> -->
+    {% include mission.html %}
+  </div>
+
+  <div class="col-12 pb-5">
+    <h2 class="h2"> Leadership </h2>
+    <div class="row mb-5">
+      {% for lead in site.data.leadership %}
+        <div class="col-lg-3 col-md-6 col-12 mt-3 mb-3 d-flex">
+          <div class="card card-dark" style="flex: 1;">
+            <!-- <div class="card-img-top"></div> -->
+            <img class="card-img-top" src="https://avatars3.githubusercontent.com/{{ lead.gh }}" alt="{{ lead.name }}">
+            <div class="card-body">
+              <h4 class="card-title"> {{ lead.name }} </h4>
+              <h6 class="card-subtitle text-muted"> {{ lead.position }} </h6>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div class="col-12 pb-5">
+    <h2 class="h2"> Sponsorship </h2>
+    <div class="row">
+      {% for sponsor in site.data.sponsors %}
+      <div class="col-lg-6 col-md-6 col-12 mt-3 mb-3 d-flex">
+        <a class="card p-3 border-0 d-flex bg-transparent" style="flex: 1; box-sizing: border-box; max-height: 200px; vertical-align: middle;" href="{{ sponsor.link }}">
+          <img class="card-img-top" src="{{ sponsor.img | prepend: '/assets/images/sponsors/' }}" alt="{{ sponsor.name }}" style="max-height: calc(200px - 2rem);">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

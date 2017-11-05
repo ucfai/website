@@ -9,7 +9,7 @@
 
   <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navbarCollapseable">
     <div class="navbar-nav">
-      {% for li in site.data.nav.global %}
+      {% for li in site.nav.global %}
         {% assign lookup = page.url | remove: '/' %}
       <a class="nav-item nav-link d-flex flex-column justify-content-center{% if page.url contains li.url or (lookup == site.meta.semester and li.url == '/now') or (site.data.semesters.list contains lookup and lookup != site.meta.semester and li.url == '/archives') %} active{% endif %}"
          href="{{ li.url | prepend: site.baseurl }}">{{ li.title }}</a>

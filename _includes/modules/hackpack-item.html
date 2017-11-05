@@ -7,7 +7,7 @@
         <div class="btn-group">
           {% for diff in item.tags %}
           <div class="btn btn-secondary btn-sm disabled">
-            {{ site.data.hackpack_papers.shorthand[diff] }}
+            {{ site.paper_decoder[diff] }}
           </div>
           {% endfor %}
         </div>
