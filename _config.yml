@@ -7,6 +7,11 @@ meta:
   mission:      We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
   sign_in_url:  https://docs.google.com/forms/d/e/1FAIpQLScLRmQIo3MnEjgPY38y2_nXJMrJ8yQh48qXywEY7Jp3XuMtBA/viewform
 
+paper_decoder:
+  - A: Advanced
+  - N: Novice
+  - S: Short
+  - L: Long
 
 title: SIGAI@UCF
 email: ucfsigai@gmail.com
@@ -29,10 +34,19 @@ permalinks: pretty
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .github/
+  - Dockerfile
+  - docker-compose.yml
+  - .gitignore
+  - .gitmodules
+  - LICENSE.md
+
+include: ["_pages"]
+permalinks: /:title/
 
 collections:
   hackpack:
-    output: false
+    output: true
   post-indices:
     output: true
 
@@ -49,6 +63,12 @@ defaults:
     values:
       layout: "semester-master"
       permalink:  /:title/
+  - scope:
+      path: ""
+      type: "hackpack"
+    values:
+      layout: "hackpack"
+      permalink: /hackpack/:path
 
 
 nav:
@@ -59,8 +79,8 @@ nav:
     url:    /hackpack
   - title:  Archives
     url:    /archives
-  - title:  Club
-    url:    /club
+  - title:  About Us
+    url:    /about
   - title:  FAQs
     url:    /faqs
 
@@ -70,8 +90,3 @@ nav:
     - textbooks
     - moocs
     - tutorials
-
-plugins:
-    - jekyll-avatar
-    - jemoji
-    - jekyll-pages-directory
