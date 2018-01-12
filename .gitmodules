@@ -4,3 +4,6 @@
 [submodule "_meetings"]
 	path = _meetings
 	url = https://github.com/ucfsigai/meetings.git
+[submodule "_course"]
+	path = _course
+	url = https://github.com/ucfsigai/course.git
