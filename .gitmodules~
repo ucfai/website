@@ -1,8 +1,0 @@
-[submodule "_hackpack"]
-	path = _hackpack
-	url = https://github.com/ucfsigai/hackpack.git
-	branch = master
-[submodule "_meetings"]
-	path = meetings
-	url = https://github.com/ucfsigai/meetings.git
-	branch = master
