@@ -1,3 +1,6 @@
 [submodule "_hackpack"]
 	path = _hackpack
-	url = git@github.com:ucfsigai/hackpack.git
+	url = https://github.com/ucfsigai/hackpack.git
+[submodule "_meetings"]
+	path = _meetings
+	url = https://github.com/ucfsigai/meetings.git
