@@ -3,10 +3,6 @@
 	url = https://github.com/ucfsigai/hackpack.git
 	branch = master
 [submodule "_meetings"]
-	path = _meetings
+	path = meetings
 	url = https://github.com/ucfsigai/meetings.git
-	branch = master
-[submodule "_course"]
-	path = _course
-	url = https://github.com/ucfsigai/course.git
 	branch = master
