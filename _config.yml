@@ -1,7 +1,7 @@
 # Meta information for club stuff
 meta:
-  semester:     fa17
-  meet_day:     Wednesday
+  semester:     sp18
+  meet_day:     Thursday
   meet_time:    7:30pm
   mtg_room:     VAB 113
   mission:      We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
@@ -35,17 +35,25 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .github/
-  - Dockerfile
-  - docker-compose.yml
+  - .docker/
+  - _meetings/__admin__/
+  - _meetings/.docker/
+  - _course/__admin__/
+  - _course/.docker/
   - .gitignore
   - .gitmodules
   - LICENSE.md
+  - vendor/
 
 include: ["_pages"]
 permalinks: /:title/
 
 collections:
   hackpack:
+    output: true
+  meetings:
+    output: true
+  course:
     output: true
   post-indices:
     output: true
@@ -68,7 +76,20 @@ defaults:
       type: "hackpack"
     values:
       layout: "hackpack"
-      permalink: /hackpack/:path
+      permalink: /hackpack/:path/
+  - scope:
+      path: ""
+      type: "meetings"
+    values:
+      layout: "meetings"
+      permalink: /meetings/:path/
+  - scope:
+      path: ""
+      type: "course"
+    values:
+      layout: "course"
+      permalink: /course/:path/
+
 
 
 nav:
