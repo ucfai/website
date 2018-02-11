@@ -7,4 +7,4 @@ docker run --rm \
   -p 4000:4000 \
   -p 80:80 \
   jekyll/jekyll:$JEKYLL_VERSION \
-  bash -c "bundle install; jekyll s"
+  bash -c "bundle install; jekyll s --incremental"

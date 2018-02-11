@@ -1,0 +1,72 @@
+---
+title:      Getting Acquainted with our Docker + Github Workflow
+layout:     base-subnav
+permalink:  /meetings/workflow/
+sections:
+  - link: "#docker-win"
+    name: "Windows"
+  - link: "#docker-mac"
+    name: "macOS"
+  - link: "#docker-lnx"
+    name: "Linux"
+---
+
+{% include navs/subnav-scroll.html urls=page.sections %}
+
+<div class="alert alert-primary mx-2">
+  <p class="mb-0">
+    This should take you though all the steps you need for the workflow that we use to run lectures and workshops. If none of these steps work, please let the <a href="/meetings/{{ site.data.meta.semester }}/coordinators"> coordinators </a> know.
+</p>
+</div>
+
+<h1 id="docker-win" class="text-gold text-center pt-5"> Windows </h1>
+{% comment %}
+  Hyper-V Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.windows.HyperV
+  lastUpdate=site.data.workflow.windows.lastUpdate %}
+
+{% comment %}
+  Docker Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.windows.Docker
+  lastUpdate=site.data.workflow.windows.lastUpdate %}
+
+{% comment %}
+  GitHub Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.windows.GitHub
+  lastUpdate=site.data.workflow.windows.lastUpdate %}
+
+<h1 id="docker-mac" class="text-gold text-center pt-5"> macOS </h1>
+{% comment %}
+  Docker Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.macOS.Docker
+  lastUpdate=site.data.workflow.macOS.lastUpdate %}
+
+{% comment %}
+  GitHub Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.macOS.GitHub
+  lastUpdate=site.data.workflow.macOS.lastUpdate %}
+
+<h1 id="docker-lnx" class="text-gold text-center pt-5"> Linux </h1>
+{% comment %}
+  Docker Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.linux.Docker
+  lastUpdate=site.data.workflow.linux.lastUpdate %}
+
+{% comment %}
+  GitHub Instructions
+{% endcomment %}
+{% include workflow-instructions.html
+  workflow=site.data.workflow.linux.GitHub
+  lastUpdate=site.data.workflow.linux.lastUpdate %}

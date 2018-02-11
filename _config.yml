@@ -1,18 +1,3 @@
-# Meta information for club stuff
-meta:
-  semester:     sp18
-  meet_day:     Thursday
-  meet_time:    7:30pm
-  mtg_room:     VAB 113
-  mission:      We’re on a mission to foster a hotspot for the next generation of artificial intelligence researchers and engineers at UCF.
-  sign_in_url:  https://docs.google.com/forms/d/e/1FAIpQLScLRmQIo3MnEjgPY38y2_nXJMrJ8yQh48qXywEY7Jp3XuMtBA/viewform
-
-paper_decoder:
-  - A: Advanced
-  - N: Novice
-  - S: Short
-  - L: Long
-
 title: SIGAI@UCF
 email: ucfsigai@gmail.com
 description: >
@@ -20,17 +5,10 @@ description: >
 baseurl: ""
 url: "https://ucfsigai.github.io"
 
-social:
-  gh:     https://github.com/ucfsigai
-  yt:     https://youtube.com/channel/UCSraILnIqJ-4oqCPp-VzxWQ
-  fbg:    https://facebook.com/groups/ucfsigai
-  fbp:    https://facebook.com/ucfsigai
-  slack:  https://acmatucf.slack.com/messages/C0PK124LS/team/U1YFXT695/
-
 # build settings
-future: true
 markdown: kramdown
 permalinks: pretty
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -45,69 +23,37 @@ exclude:
   - LICENSE.md
   - vendor/
 
-include: ["_pages"]
-permalinks: /:title/
+include:
+  - _meetings/.docker/.jupter/custom/custom.css
 
 collections:
   hackpack:
     output: true
+    permalink: /hackpack/:path
   meetings:
     output: true
+    permalink: /meetings/:path
   course:
     output: true
-  post-indices:
+    permalink: /course/:path
+  static:
     output: true
+    permalink: /:path
 
 defaults:
   - scope:
-      path: ""
-      type: "posts"
+      type: hackpack
     values:
-      layout: "post"
-      permalink: /:categories/:title/
+      layout: hackpack
   - scope:
-      path: ""
-      type: "post-indices"
+      type: meetings
     values:
-      layout: "semester-master"
-      permalink:  /:title/
+      layout: meetings
   - scope:
-      path: ""
-      type: "hackpack"
+      type: course
     values:
-      layout: "hackpack"
-      permalink: /hackpack/:path/
+      layout: course
   - scope:
-      path: ""
-      type: "meetings"
+      type: static
     values:
-      layout: "meetings"
-      permalink: /meetings/:path/
-  - scope:
-      path: ""
-      type: "course"
-    values:
-      layout: "course"
-      permalink: /course/:path/
-
-
-
-nav:
-  global:
-  - title:  Now
-    url:    /now
-  - title:  Hackpack
-    url:    /hackpack
-  - title:  Archives
-    url:    /archives
-  - title:  About Us
-    url:    /about
-  - title:  FAQs
-    url:    /faqs
-
-  hackpack:
-    - papers
-    - novels
-    - textbooks
-    - moocs
-    - tutorials
+      layout: pages

@@ -1,20 +1,21 @@
 <nav class="site-nav navbar navbar-expand-lg navbar-dark d-flex sticky-top">
 
-  <a class="navbar-brand" href="/">
-    <span class="ucfsigai-brand"></span>
-  </a>
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseable" aria-controls="navbarCollapseable" aria-expanded="false" aria-label="Toggle navigation">
-  </button>
+    <a class="navbar-brand" href="/">
+        <span class="ucfsigai-brand"></span>
+    </a>
 
-  <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navbarCollapseable">
-    <div class="navbar-nav">
-      {% for li in site.nav.global %}
-        {% assign lookup = page.url | remove: '/' %}
-      <a class="nav-item nav-link d-flex flex-column justify-content-center{% if page.url contains li.url or (lookup == site.meta.semester and li.url == '/now') or (site.data.semesters.list contains lookup and lookup != site.meta.semester and li.url == '/archives') %} active{% endif %}"
-         href="{{ li.url | prepend: site.baseurl }}">{{ li.title }}</a>
-      {% endfor %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseable" aria-controls="navbarCollapseable" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+
+    <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navbarCollapseable">
+        <div class="navbar-nav">
+            {% assign static = site.static | sort: 'priority' %}
+            {% for li in static %}
+                {% if li.priority %}
+                    <a class="nav-item nav-link" href="{{ li.url | prepend: site.baseurl }}"> {{ li.title }} </a>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
-  </div>
 
 </nav>

@@ -1,0 +1,16 @@
+---
+title:      Meetings (Archive)
+priority:   2
+permalink:  /meetings/
+---
+
+{% for sem in site.data.semesters.list %}
+    <div class="row">
+        <div class="card card-dark">
+            <h4 class="card-header"> {{ site.data.conv[sem] }} </h4>
+            <div class="card-body">
+                {{ site.meetings[sem] }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
