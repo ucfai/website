@@ -10,10 +10,19 @@ far (Feb 02, 18), the course is unreleased, so we'll just point towards the
 meetings.
 {% endcomment %}
 
-{% include mission.html %}
+{% include modules/alert-mission.html %}
 
+{% include modules/alert-workflow.html %}
+
+<h3 class="display-4 text-center"> {{ site.data.conv[site.data.meta.semester] }} Syllabus </h3>
+{% include_relative sp18.html %}
+
+{% comment %}
 {% include subsite-chooser.html %}
+{% endcomment %}
 
+{% comment %}
 <!-- Recent News, i.e. updates; should be xposted to Facebook group, too. -->
-<!--<h1 class="h1 text-center pt-5" id="recent-news"> Recent News </h1> <hr>-->
-<!--<div class="row pb-5"></div>-->
+<h1 class="h1 text-center pt-5" id="recent-news"> Recent News </h1> <hr>
+<div class="row pb-5"></div>
+{% endcomment %}

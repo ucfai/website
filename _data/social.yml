@@ -1,15 +1,15 @@
 urls:
-  gh:     https://github.com/
-  yt:     https://youtube.com/
-  fbg:    https://facebook.com/groups/
-  fbp:    https://facebook.com/
-  fbe:    https://facebook.com/event/
-  slack:  https://acmatucf.slack.com/
+  gh:     "https://github.com/"
+  yt:     "https://youtube.com/"
+  fbg:    "https://facebook.com/groups/"
+  fbp:    "https://facebook.com/"
+  fbe:    "https://facebook.com/event/"
+  slack:  "https://acmatucf.slack.com/"
 
 
 user:
-  gh:     ucfsigai
-  yt:     UCSraILnIqJ-4oqCPp-VzxWQ
-  fbg:    ucfsigai
-  fbp:    ucfsigai
-  slack:  messages/C0PK124LS/team/U1YFXT695/
+  gh:     "ucfsigai"
+  yt:     "UCSraILnIqJ-4oqCPp-VzxWQ"
+  fbg:    "ucfsigai"
+  fbp:    "ucfsigai"
+  slack:  "messages/C0PK124LS/team/U1YFXT695"

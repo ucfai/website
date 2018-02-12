@@ -1,32 +1,36 @@
 <footer class="container-fluid bg-dark navbar-dark">
-  <div class="container p-5">
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <a class="navbar-brand m-0 d-block" href="{{ site.baseurl }}">
-          <span class="ucfsigai-brand h1 pb-3 d-flex m-0"></span>
-        </a>
-        <div class="btn-group btn-group-lg d-flex">
-          <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="https://github.com/{{ site.social.gh }}">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="https://youtube.com/{{ site.social.yt }}">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-          </a>
-          <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="https://facebook.com/groups/{{ site.social.fbg }}">
-            <i class="fab fa-facebook-square" aria-hidden="true"></i>
-          </a>
-          <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="https://acmatucf.slack.com/channel/sig_ai">
-            <i class="fab fa-slack" aria-hidden="true"></i>
-          </a>
+    
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <a class="navbar-brand m-0 d-block" href="{{ site.baseurl }}">
+                  <span class="ucfsigai-brand h1 pb-3 d-flex m-0"></span>
+                </a>
+                <div class="btn-group btn-group-lg d-flex">
+                  {% capture gh %}{{ site.data.social.urls.gh }}{{ site.data.social.user.gh }}{% endcapture %}
+                  <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="{{ gh }}">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  {% capture yt %}{{ site.data.social.urls.yt }}{{ site.data.social.user.yt }}{% endcapture %}
+                  <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="{{ yt }}">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                  </a>
+                  {% capture fbg %}{{ site.data.social.urls.fbg }}{{ site.data.social.user.fbg }}{% endcapture %}
+                  <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="{{ fbg }}">
+                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  </a>
+                  {% capture slack %}{{ site.data.social.urls.slack }}{{ site.data.social.user.slack }}{% endcapture %}
+                  <a role="button" class="btn btn-transparent text-white" style="flex: 1;" href="{{ slack }}">
+                    <i class="fab fa-slack" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                {% include meta/mission.html classes="text-muted" %}
+                {% include meta/meet.html    classes="text-white" %}
+            </div>
         </div>
-      </div>
-  
-      <div class="col-12 col-lg-6">
-        <p class="text-muted"> {{ site.meta.mission }} </p>
-        <p class="text-white"> We meet just about every <span class="text-gold">{{ site.meta.meet_day }}</span> at <span class="text-gold">{{ site.meta.meet_time }}</span>.
-          Always in <span class="text-gold">{{ site.meta.mtg_room }}</span>. (<a class="text-gold" href="/now">Check the schedule here.</a>) </p>
-      </div>
     </div>
-  </div>
 
 </footer>
