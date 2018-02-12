@@ -5,12 +5,19 @@ permalink:  /meetings/
 ---
 
 {% for sem in site.data.semesters.list %}
-    <div class="row">
-        <div class="card card-dark">
-            <h4 class="card-header"> {{ site.data.conv[sem] }} </h4>
-            <div class="card-body">
-                {{ site.meetings[sem] }}
-            </div>
+<div class="row">
+  <div class="jumbotron">
+    <h4 class="display-4 mb-4"> {{ site.data.conv[sem] }} </h4>
+    <p class="lead"> {{ site.data.sems[sem].desc }} </p>
+    <div class="list-group">
+      {% for unit in site.data.sems[sem].units %}
+        <div class="list-group-item">
+          <h5 class="mb-1">Unit {{ unit.unit }}: {{ unit.name }} </h5>
+          <p class="mb-1"> {{ unit.desc }} </p>
         </div>
+      {% endfor %}
     </div>
+    <a href="/meetings/{{ sem }}" class="btn btn-secondary btn-lg mt-4"> Take a gander </a>
+  </div>
+</div>
 {% endfor %}
