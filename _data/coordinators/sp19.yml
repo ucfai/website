@@ -1,0 +1,19 @@
+- nam: John Muchovej
+  git: ionlights
+  pos: Director
+  foc: ["ig", "dsg"]
+
+- nam: Chas Kane
+  git: ChasKane
+  pos: Coordinator
+  foc: ["dsg"]
+
+- nam: Aidan Lakshman
+  git: purpletrator
+  pos: Coordinator
+  foc: ["dsg"]
+
+- nam: Evan Waldmann
+  git: waldmannly
+  pos: Coordinator
+  foc: ["ig"]

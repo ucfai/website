@@ -1,0 +1,77 @@
+---
+title:      Setup for Groups &amp; Course
+layout:     base
+subnav:     true
+permalink:  /setup/
+priority:   2
+sections:
+  - link: "#docker-win"
+    name: "Windows"
+  - link: "#docker-mac"
+    name: "macOS"
+  - link: "#docker-lnx"
+    name: "Linux"
+---
+
+{% include subnavs/scroll.html urls=page.sections %}
+
+<div class="alert alert-primary mx-2">
+    <p class="mb-0">
+        This should take you though all the steps you need for the workflow that we use to run lectures and workshops. If none of these steps work, please ping the coordinators in Slack.
+    </p>
+</div>
+
+
+<h1 id="docker-win" class="text-gold text-center pt-5"> Windows </h1>
+{% comment %}
+    Hyper-V Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.windows.HyperV
+    lastUpdate=site.data.setup.windows.lastUpdate %}
+
+{% comment %}
+    Docker Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.windows.Docker
+    lastUpdate=site.data.setup.windows.lastUpdate %}
+
+{% comment %}
+    GitHub Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.windows.GitHub
+    lastUpdate=site.data.setup.windows.lastUpdate %}
+
+
+<h1 id="docker-mac" class="text-gold text-center pt-5"> macOS </h1>
+{% comment %}
+    Docker Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.macOS.Docker
+    lastUpdate=site.data.setup.macOS.lastUpdate %}
+
+{% comment %}
+    GitHub Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.macOS.GitHub
+    lastUpdate=site.data.setup.macOS.lastUpdate %}
+
+
+<h1 id="docker-lnx" class="text-gold text-center pt-5"> Linux </h1>
+{% comment %}
+    Docker Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.linux.Docker
+    lastUpdate=site.data.setup.linux.lastUpdate %}
+
+{% comment %}
+    GitHub Instructions
+{% endcomment %}
+{% include modules/setup-instructions.html
+    workflow=site.data.setup.linux.GitHub
+    lastUpdate=site.data.setup.linux.lastUpdate %}

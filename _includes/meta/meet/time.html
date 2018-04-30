@@ -1,0 +1,12 @@
+{% comment %}
+if (include.time) is defined:
+return include.time
+else:
+return "text-gold"
+{% endcomment %}
+
+{% capture cls %}
+{% if include.time %}{{ include.time }}{% else %}text-gold{% endif %}
+{% endcapture %}
+
+<span class="text-gold">{{ include.time }}</span>

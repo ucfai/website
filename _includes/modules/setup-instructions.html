@@ -1,0 +1,13 @@
+{% capture len %}{{ include.workflow.instr | size | minus: 1 }}{% endcapture %}
+
+<div class="card text-white card-dark my-4 mx-2">
+  <h4 class="card-header text-gold"> {{ include.workflow.title }} (Last updated: {{ include.lastUpdate }})</h4>
+  <ul class="list-group list-group-flush">
+    {% for itm in (0..len) %}
+    <li class="list-group-item list-group-item-dark">
+      <span class="badge badge-light mr-2">{{ itm | prepend: "000" | slice: -2, 2 }}</span>
+      {{ include.workflow.instr[itm] }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

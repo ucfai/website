@@ -1,0 +1,9 @@
+<ul class="subnav-scroll nav nav-pills nav-justified mb-5 p-3 rounded-bottom border border-top-0 ">
+  {% for url in include.urls %}
+  <li class="nav-item">
+    <a class="nav-link{% if page.title == url.name %} active{% endif %}"
+       href="{{ url.link }}">
+      {{ url.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

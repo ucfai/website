@@ -1,0 +1,12 @@
+{% comment %}
+if (include.sched) is defined:
+    return include.shed
+else:
+    return "text-gold"
+{% endcomment %}
+
+{% capture cls %}
+    {% if include.sched %}{{ include.sched }}{% else %}text-gold{% endif %}
+{% endcapture %}
+
+(<a class="text-gold" href="/{{ include.sched }}/{{ site.sem }}">Check the schedule here.</a>)

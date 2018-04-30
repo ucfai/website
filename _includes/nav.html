@@ -1,0 +1,42 @@
+{% capture active-brand %}{% if page.url == site.baseurl %} active{% endif %}{% endcapture %}
+
+{% capture group %}{% if page.url contains "data-science" %}/data-science{% endif %}{% endcapture %}
+{% capture group %}{% if page.url contains "intelligence" %}/intelligence{% endif %}{% endcapture %}
+{% capture group %}{% if page.url contains "hackpack" %}/hackpack{% endif %}{% endcapture %}
+{% capture group %}{% if page.url contains "course" %}/course{% endif %}{% endcapture %}
+
+<nav class="navbar navbar-expand-md sigai-navbar">
+	<a class="navbar-brand{{ active-brand }}" href="{{ site.baseurl | prepend: site.url }}">
+		<span class="sigai-brand"></span>
+		<span class="sigai-group">{{ group }}</span>
+	</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarGlobal" aria-controls="navbarGlobal" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarGlobal">
+		<ul class="navbar-nav ml-auto sigai-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="/setup"> setup </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/hackpack"> hackpack </a>
+			</li>
+			<li class="nav-item dropdown">
+				<span class="nav-link dropdown-toggle" id="groupsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> groups </span>
+
+				<div class="dropdown-menu" aria-labelledby="groupsDropdown">
+					<a class="dropdown-item" href="/data-science">data-science</a>
+					<a class="dropdown-item" href="/intelligence">intelligence</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/course"> course </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about"> about </a>
+			</li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,12 @@
+{% comment %}
+if (include.room) is defined:
+return include.room
+else:
+return "text-gold"
+{% endcomment %}
+
+{% capture cls %}
+{% if include.room %}{{ include.room }}{% else %}text-gold{% endif %}
+{% endcapture %}
+
+<span class="text-gold">{{ include.room }}</span>

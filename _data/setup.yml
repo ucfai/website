@@ -1,0 +1,64 @@
+windows:
+  lastUpdate: "Feb 10, 2018"
+  HyperV:
+    title: "Getting Hyper-V"
+    instr:
+      - "Go to <a href=\"//goo.gl/bT0WY3\">UCF DreamSpark</a>."
+      - "\"Sign In\" if you have an account, or \"Register\" if you don't."
+      - "Click on \"Students\" > \"Microsoft Imagine Premium\" > \"Operating Systems\"."
+      - "Click on \"Windows 10.\" > \"Windows 10 (Multiple Editions).\""
+      - "Grab the non-UK version by clicking \"Add to Cart.\" and checkout."
+      - "Make note (by copying &ndash; Ctrl + C) of the \"Product Key,\" it should be something like... \"XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\" (5x 5-character string)."
+      - "Open up \"Settings\" and search \"Product Key,\" then paste (Ctrl + V) in the pop-up window."
+      - "You'll be prompted to let Windows restart and perform some updates. Do so."
+      - "Once you've been upgraded to an eligible Windows, open up the start menu (<i class=\"fab fa-windows\"></i>) and search \"Turn Windows features on\"."
+      - "Scroll down to Hyper-V and click the checkbox. You'll be taken through some more boot loops. After which, you should have Hyper-V installed."
+      - "Verify Hyper-V is installed by again opening the start menu (<i class=\"fab fa-windows\"></i>) and searching \"Hyper-V\", you should see a program come up. (Don't open it.)"
+  Docker:
+    title: "Getting Docker"
+    instr:
+      - "Go to the <a href=\"https://store.docker.com/editions/community/docker-ce-desktop-windows\">Docker Store</a> and download Docker."
+      - "Proceed through the installation process. You'll be prompted to reboot a few times."
+      - "You shouldn't encounter any errors &ndash; as you made sure you had Hyper-V first. :smile:"
+      - "Open up a command line and grab the Docker image by typing <code>docker pull ucfsigai/meetings:sp18-cpu</code>."
+  GitHub:
+    title: "Getting GitHub"
+    instr:
+      - "Go to <a href=\"https://desktop.github.com/\">GitHub Desktop</a> and download GitHub Desktop."
+      - "Run the installer."
+      - "Open \"Git Bash\" and hop down to <strong>Step 01</strong> in <a href=\"#docker-lnx\">GitHub on Linux</a>."
+
+macOS:
+  lastUpdate: "Feb 10, 2018"
+  Docker:
+    title: "Getting Docker"
+    instr:
+      - "Go to the <a href=\"https://store.docker.com/editions/community/docker-ce-desktop-mac\">Docker Store</a> and download Docker."
+      - "Proceed through the installation process."
+      - "You shouldn't encounter any errors &ndash; provided you Macbook is from 2011 or later. :smile:"
+      - "Open up Terminal and grab the Docker image by typing <code>docker pull ucfsigai/meetings:sp18-cpu</code>."
+  GitHub:
+    title: "Getting GitHub"
+    instr:
+      - "Go to <a href=\"https://desktop.github.com/\">GitHub Desktop</a> and download GitHub Desktop."
+      - "Run the installer."
+      - "Open \"Terminal\" and hop down to <strong>Step 01</strong> in <a href=\"#docker-lnx\">GitHub on Linux</a>."
+
+linux:
+  lastUpdate: "Feb 10, 2018"
+  Docker:
+    title: "Getting Docker"
+    instr:
+      - "Open up a Terminal window."
+      - "Install Docker through your OS's package manager, <code>sudo apt install docker</code> on Debian-based Linux, for instance."
+      - "You shouldn't encounter any errors. :smile:"
+      - "In the same Terminal window, grab the Docker image by typing <code>docker pull ucfsigai/meetings:sp18-cpu</code>."
+  GitHub:
+    title: "Getting GitHub"
+    instr:
+      - "Open a Terminal window."
+      - "<code>which git</code>. Unless you get \"git not found\", Git is on your machine."
+      - "<code>cd /where/you/store/sigai/stuff</code>"
+      - "<code>git clone https://github.com/ucfsigai/meetings meetings</code>"
+      - "The \"meetings\" repository is now on your laptop."
+      - "Before every meeting, you should pull this repository, if you're trying to use it during the lecture/workshops, using: <code>git pull</code>. <strong>NOTE:</strong> If you've made any changes to the repo, locally, you need to save those changes &ndash; a <code>git pull</code> will overwrite those changes."
