@@ -1,0 +1,14 @@
+<div class="card card-sigai-subsite">
+    <a href="{{ include.subsite.url }}" class="card-header text-muted h4">
+        <i class="fas fa-link"></i>
+        {{ include.subsite.url }}
+    </a>
+    <div class="card-body">
+        {{ include.subsite.desc }}
+    </div>
+    {% if include.subsite.foot %}
+    <div class="card-footer">
+    	{% include meta/meet{{ include.subsite.url }}.html classes="mb-0" %}
+    </div>
+    {% endif %}
+</div>

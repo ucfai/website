@@ -1,8 +1,10 @@
-<div class="alert alert-dark">
+<div class="alert alert-sigai-mission">
     <h4 class="alert-heading">
-        Welcome to <span class="sigai-brand"></span>!
+        Welcome to <span class="sigai-brand"></span>&nbsp;!
     </h4>
-    {% include meta/mission.html %}
-    <hr>
-    {% include meta/meet.html classes="text-white mb-0" %}
+    {% include meta/mission.html classes="mb-0" %}
+    {% if include.meets %}
+    	<hr>
+    	{% include meta/meet.html classes="text-white mb-0" %}
+	{% endif %}
 </div>

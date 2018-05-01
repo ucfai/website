@@ -4,47 +4,15 @@ layout: base
 
 {% include modules/alert-mission.html %}
 
-<div class="row py-5">
-	<div class="col-sm-4">
-	    <div class="card card-dark">
-	        <a href="/intelligence" class="card-header text-muted h4">
-	            <i class="fas fa-link"></i>
-	            /intelligence
-	        </a>
-	        <div class="card-body">
-	            <span class="sigai-brand"></span>. We
-	            focus on cultivating a community of budding researchers and
-	            engineers empassioned to study intelligence. We host lectures
-	            and workshops on a multitude of topics in AI.
-	        </div>
-	    </div>
-	</div>
-	<div class="col-sm-4">
-	    <div class="card card-dark">
-	        <a href="/data-science" class="card-header text-muted h4">
-	            <i class="fas fa-link"></i>
-	            /data-science
-	        </a>
-	        <div class="card-body">
-	            <span class="sigai-brand"></span>. We
-	            focus on cultivating a community of budding researchers and
-	            engineers empassioned to study intelligence. We host lectures
-	            and workshops on a multitude of topics in AI.
-	        </div>
-	    </div>
-	</div>
-	<div class="col-sm-4">
-	    <div class="card card-dark">
-	        <a href="/course" class="card-header text-muted h4">
-	            <i class="fas fa-link"></i>
-	            /course
-	        </a>
-	        <div class="card-body">
-	            As part of our partnership with the CBMM at MIT, we publish and
-	            manage a course which is a survey of the field of artificial
-	            intelligence. The course is tailored towards new ideas relating
-	            to the science of intelligence.
-	        </div>
-	    </div>
-	</div>
+
+<h1 class="sigai-section-title"> Groups at SIGAI </h1>
+<div class="card-deck pb-4">
+	{% include modules/card-subsite.html subsite=site.data.subsites.intelligence %}
+	{% include modules/card-subsite.html subsite=site.data.subsites.data-science %}
+</div>
+
+<h1 class="sigai-section-title"> Resources by SIGAI </h1>
+<div class="card-deck pb-4">
+	{% include modules/card-subsite.html subsite=site.data.subsites.course %}
+	{% include modules/card-subsite.html subsite=site.data.subsites.hackpack %}
 </div>

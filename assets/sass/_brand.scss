@@ -27,3 +27,14 @@
 .navbar-brand.group, .navbar-brand.active {
 	background: $nav-active;
 }
+
+.alert.alert-sigai-mission {
+	background: #464d54;
+}
+
+.group-meet {
+	color: $brand-white;
+	a, span {
+		color: $brand-gold;
+	}
+}

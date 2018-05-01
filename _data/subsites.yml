@@ -1,0 +1,30 @@
+intelligence: 
+  url: /intelligence
+  desc: >-
+    The Intelligence Group meetings cover topics ranging from Philosophy of 
+    Mind, to [Computational] Neuroscience, Cognitive Science, and 
+    research-focused Computational Intelligence. 
+  foot: true
+
+
+data-science:
+  url: /data-science
+  desc: >-
+    The Data Science Group takes you from zero-to-hero and prepares you for a 
+    career in data science by providing lectures and workshops on industry 
+    relevant methods, but most importantly participating in Kaggle competitions.
+  foot: true
+
+course:
+  url: /course
+  desc: >-
+    One of our sponsors, the CBMM@MIT, enourages a course we've designed to 
+    become acquainted with the field of AI and help you broaden your knowledge
+    of the various disciplines within AI, especially when studying Intelligence.
+
+hackpack:
+  url: /hackpack
+  desc: >-
+    This is a quick reference to some awesome content the group has found while 
+    learning, and we host them here to help others, especially with their topical
+    breakdown, so you can spend more time learning.

@@ -1,3 +1,5 @@
+remote_theme: ucfsigai/global-site-theme@master
+
 sem: fa18
 meet:
   ig:
