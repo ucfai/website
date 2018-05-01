@@ -1,4 +1,4 @@
-remote_theme: ucfsigai/global-site-theme@master
+remote_theme: "ucfsigai/global-site-theme@master"
 
 sem: fa18
 meet:
@@ -26,7 +26,9 @@ description: >-
 baseurl: ""
 ## protocol (http[s]) and tld (ucfsigai.github.io)
 url: "https://ucfsigai.github.io"
-github: ucfsigai
+social:
+  github: ucfsigai
+  slack:  https://ucfsigai.slack.com/
 
 # Build settings
 markdown: kramdown
