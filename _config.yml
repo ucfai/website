@@ -33,9 +33,6 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
-sass:
-  sass_dir: assets/sass
-
 exclude:
   - docker-compose.yml
   - vendor/
