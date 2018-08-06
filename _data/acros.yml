@@ -1,2 +1,7 @@
-ig: Intelligence
-dsg: Data Science
+words:
+  ig: Intelligence
+  dsg: Data Science
+
+icons:
+  ig:  '<i class="fas fa-brain"></i>'
+  dsg: '<i class="fas fa-chart-bar"></i>'

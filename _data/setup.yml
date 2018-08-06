@@ -3,7 +3,7 @@ windows:
   HyperV:
     title: "Getting Hyper-V"
     instr:
-      - "Go to <a href=\"//goo.gl/bT0WY3\">UCF DreamSpark</a>."
+      - "Go to UCF DreamSpark."
       - "\"Sign In\" if you have an account, or \"Register\" if you don't."
       - "Click on \"Students\" > \"Microsoft Imagine Premium\" > \"Operating Systems\"."
       - "Click on \"Windows 10.\" > \"Windows 10 (Multiple Editions).\""

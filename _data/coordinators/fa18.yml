@@ -2,18 +2,26 @@
   git: ionlights
   pos: Director
   foc: ["ig", "dsg"]
+  web: https://ionlights.com/
+  maj: Computer Science, Mathematical Economics
 
 - nam: Chas Kane
   git: ChasKane
   pos: Coordinator
   foc: ["dsg"]
+  web: ""
+  maj: Computer Science
 
 - nam: Aidan Lakshman
-  git: purpletrator
+  git: ahl98
   pos: Coordinator
   foc: ["dsg"]
+  web: ""
+  maj: Mathematics
 
 - nam: Evan Waldmann
   git: waldmannly
   pos: Coordinator
   foc: ["ig"]
+  web: ""
+  maj: Mathematics

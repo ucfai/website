@@ -1,0 +1,14 @@
+<div class="media">
+  <img class="rounded mr-3" src="https://avatars.githubusercontent.com/{{ include.lead.git }}?s=120" alt="{{ include.lead.nam }}">
+  <div class="media-body">
+    <h4> {{ include.lead.nam }} </h4>
+    <h5> {{ include.lead.pos }} </h5>
+    <p>  {{ include.lead.maj }} </p>
+    <div class="btn btn-group btn-group-sm p-0">
+      <span class="btn btn-primary"> <i class="fas fa-users"></i> </span>
+      {% for focus in include.lead.foc %}
+      <span class="btn btn-secondary"> {{ site.data.acros.icons[focus] }} </span>
+      {% endfor %}
+    </div>
+  </div>
+</div>
