@@ -7,9 +7,9 @@ meet:
     time: "6:00pm"
     room: "HEC 103"
   dsg:
-    day: "Mon"
+    day: "Wed"
     time: "6:00pm"
-    room: "HEC 103"
+    room: "TBA"
 
 ## site title
 title: SIGAI@UCF
