@@ -32,8 +32,8 @@ social:
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
+#plugins:
+#  - jekyll-feed
 
 excerpt_separator: <!--more-->
 
