@@ -13,7 +13,7 @@ layout: base
       </p>
     </div>
     <div class="alert alert-danger">
-      <p class="mb-0"> <strong>NOTE:</strong> We're currently (Fall 2018), only, 
+      <p class="mb-0"> <strong>NOTE:</strong> We're ONLY (for Fall 2018)
         supporting the use of the Supercomputers (Newton / Stokes), this means 
         that you only need to proceed through the <strong>Connecting to the 
         Supercomputer</strong> steps! </p>
