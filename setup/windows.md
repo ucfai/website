@@ -18,7 +18,8 @@ lastUpdate:
 </div>
 
 **This is a lengthy, tedious, process &ndash; we highly encourage you to try out
-Linux, but if Windows has a tight grip on you, then follow these steps.**
+Linux (even in a Virtual Machine), but if Windows has a tight grip on you, then 
+follow these steps.**
 1. Press `Win` (<i class="fab fa-windows"></i>) and search "Turn Windows 
    features on or off"
 1. Scroll all the way down, look for "Windows Subsystem for Linux" and activate 

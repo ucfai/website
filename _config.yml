@@ -1,4 +1,4 @@
-remote_theme: "ucfsigai/global-site-theme@master"
+remote_theme: "ucfsigai/theme@master"
 
 sem: fa18
 meet:
@@ -9,13 +9,12 @@ meet:
   dsg:
     day: "Wed"
     time: "6:00pm"
-    room: "TBA"
+    room: "HEC 101"
 
 ## site title
 title: SIGAI@UCF
-
-## this should become a google group, in a few weeks (04/30/18)
-email: ucfsigai@gmail.com
+)
+email: admins@ucfsigai.org
 
 ## SIGAI@UCF mission
 description: >-
@@ -25,7 +24,7 @@ description: >-
 ## subpath, for the site, it's just ""
 baseurl: ""
 ## protocol (http[s]) and tld (ucfsigai.github.io)
-url: "https://ucfsigai.github.io"
+url: "https://ucfsigai.org"
 social:
   github: ucfsigai
   slack:  https://ucfsigai.slack.com/
