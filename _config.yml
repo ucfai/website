@@ -8,12 +8,11 @@ meet:
     room: "HEC 103"
   dsg:
     day: "Wed"
-    time: "6:00pm"
-    room: "HEC 101"
+    time: "4:30pm"
+    room: "PSY 105"
 
 ## site title
 title: SIGAI@UCF
-)
 email: admins@ucfsigai.org
 
 ## SIGAI@UCF mission

@@ -1,3 +1,70 @@
+cluster:
+  - name: "Linux"
+    lastUpdate: "Oct 14, 2018"
+    steps:
+      - "Run `sudo apt-get install -y unzip xclip`, replacing `apt-get install`
+        with your package manager's lingo if need be. Enter your user's
+        passphrase when prompted."
+      - "Run `mkdir -p ~/.ssh/`."
+      - "Place your `sigai.student<N>.zip` archive into your `~/Downloads` folder."
+      - "Run `unzip ~/Downloads/sigai.stuudent<N> -d ~/Downloads/sigai.student<N>`."
+      - "Followed by `cp ~/Downloads/sigai.student<N>/sigai* ~/.ssh/`."
+      - "Then execute `cat ~/Downloads/sigai.student<N>/config >> ~/.ssh/config`."
+      - "Finally, run `cat ~/.ssh/sigai.student<N>_pass.txt | xclip` to copy the
+        passphrase to your clipboard."
+      - "Provided you're on the UCF network, you should now be able to access
+        Newton using `ssh sigai.newton` and Stokes using `ssh sigai.stokes`.
+        **When prompted for a passphrase, paste using `Ctrl + Shift + V`.**"
+  - name: "MacOS"
+    lastUpdate: "Oct 14, 2018"
+    steps:
+      - "Run `mkdir -p ~/.ssh/`."
+      - "Place your `sigai.student<N>.zip` archive into your `~/Downloads` folder."
+      - "Run `unzip ~/Downloads/sigai.stuudent<N> -d ~/Downloads/sigai.student<N>`."
+      - "Followed by `cp ~/Downloads/sigai.student<N>/sigai* ~/.ssh/`."
+      - "Then execute `cat ~/Downloads/sigai.student<N>/config >> ~/.ssh/config`."
+      - "Finally, run `cat ~/.ssh/sigai.student<N>_pass.txt | pbcopy` to copy the
+        passphrase to your clipboard."
+      - "Provided you're on the UCF network, you should now be able to access
+        Newton using `ssh sigai.newton` and Stokes using `ssh sigai.stokes`.
+        **When prompted for a passphrase, paste using `Cmd + V`.**"
+  - name: "Windows"
+    notes: "**This is a lengthy, tedious, process – we highly encourage you to try
+    out Linux (even in a Virtual Machine), but if Windows has a tight grip on
+    you, then follow these steps.**"
+    lastUpdate: "Oct 14, 2018"
+    steps:
+      - "Press `Win` (<i class='fab fa-windows'></i>) and search 'Turn Windows
+        features on or off'"
+      - "Scroll all the way down, look for 'Windows Subsystem for Linux' and activate
+        the checkbox."
+      - "You'll be prompted to restart, do so."
+      - "Navigate to the Windows Store and download the latest version of Ubuntu (as
+        of this writing, it's 18.04)."
+      - "Launch 'Ubuntu 18.04' – it'll say it's installing, let it do so."
+      - "Eventually, you'll be prompted for a `UNIX username` and `UNIX password`.
+        **NOTE:** `UNIX password`s don't show typing, so it's not lag if you
+        don't see anything!"
+      - "Within this window, execute: `mkdir .ssh`."
+      - "Then execute `cd .ssh`, followed by
+        `touch sigai.student<N>.pem sigai.student<N>.pem.pub config`."
+      - "Now press `Win + R` (<i class='fab fa-windows'></i> + R) and type:
+        `%LOCALAPPDATA%\Packages`, now find a folder beginning with
+        'CanonicalGroupLimited' – click it."
+      - "Now navigate to `LocalState > rootfs > home > <UNIX username>`,
+        `<UNIX username>` is whatever you chose when setting up Ubuntu, earlier."
+      - "You should see a `.ssh` directory – if not, hop back up to those steps and
+        repeat the commands."
+      - "If you open `.ssh`, you should also see at least 3 files, named what you
+        `touch`ed. (Keep this window open, you'll need it in a moment!)"
+      - "Open a new File Explorer window and import your `sigai.student<N>.zip` file
+        into your `~/Downloads`."
+      - "Unzip `sigai.student<N>.zip` using File Explorer."
+      - "Now select all the files matching the `touch` command from earlier, and drag
+        them into the other window with your `.ssh` directory."
+      - "Provided you're on the UCF network, you should now be able to access Newton
+        using `ssh sigai.newton` and Stokes using `ssh sigai.stokes`."
+
 windows:
   lastUpdate: "Feb 10, 2018"
   HyperV:

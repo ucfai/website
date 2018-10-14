@@ -9,7 +9,25 @@ lastUpdate:
     newton: Sep 06, 2018
 ---
 
-<div class="alert alert-light" markdown="1">
+<div class="alert alert-light" markdown="1" id="lnx">
+<div class="d-lg-flex flex-lg-row py-2">
+    <h2 class="col-12 col-lg-8 text-center text-lg-left m-lg-0"> On Linux </h2>
+    <div class="col-12 col-lg-4 d-flex align-items-center">
+        <p class="m-auto" style="white-space: nowrap;">Last Updated: <span class="badge badge-primary">{{ page.lastUpdate.newton }} </span></p>
+    </div>
+</div>
+
+1. Run `sudo apt-get install -y unzip xclip` (replace `apt-get install` with your package manager's lingo if need be).
+1. Run `mkdir -p ~/.ssh/`
+1. Import your `sigai.student<N>.zip` file into your `~/Downloads`.
+1. Run `unzip ~/Downloads/sigai.student<N>.zip -d ~/Downloads/sigai.student<N>`
+1. Followed by `cp ~/Downloads/sigai.student<N>/sigai* ~/.ssh/`
+1. Then execute `cat ~/Downloads/sigai.student<N>/config >> ~/.ssh/config`
+1. Provided you're on the UCF network, you should now be able to access Newton
+using `ssh sigai.newton` and Stokes using `ssh sigai.stokes`.
+</div>
+
+<div class="alert alert-light" markdown="1" id="osx">
 <div class="d-lg-flex flex-lg-row py-2">
     <h2 class="col-12 col-lg-8 text-center text-lg-left m-lg-0"> Connecting to the Supercomputer (Newton &amp; Stokes) </h2>
     <div class="col-12 col-lg-4 d-flex align-items-center">
