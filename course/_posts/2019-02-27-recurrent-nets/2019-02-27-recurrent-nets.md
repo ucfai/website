@@ -1,5 +1,5 @@
 ---
-title: "Who Needs Show Writers Nowadays? Generating Your Own Simpsons Script With RNNs."
+title: "Who Needs Show Writers Nowadays? Generating Your Own Simpsons Script With RNNs"
 categories: ["sp19"]
 authors: ['brandons209', 'ionlights']
 description: >-
